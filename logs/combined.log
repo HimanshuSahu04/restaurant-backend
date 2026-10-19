@@ -1,0 +1,908 @@
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Error creating database tables: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at createTables (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:7:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:153:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-13T11:09:07.264Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Error creating database tables: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at createTables (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:7:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:158:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-13T11:53:36.452Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Error seeding database: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at seedDatabase (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/seed.js:21:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/seed.js:123:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-13T11:53:41.989Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:02:33.529Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:02:34.842Z"}
+{"code":"ER_BAD_DB_ERROR","errno":1049,"level":"error","message":"Error creating database tables: Unknown database 'restaurant_db'","sqlMessage":"Unknown database 'restaurant_db'","sqlState":"42000","stack":"Error: Unknown database 'restaurant_db'\n    at createTables (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:7:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:158:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-13T12:05:04.086Z"}
+{"code":"ER_BAD_DB_ERROR","errno":1049,"level":"error","message":"Error seeding database: Unknown database 'restaurant_db'","sqlMessage":"Unknown database 'restaurant_db'","sqlState":"42000","stack":"Error: Unknown database 'restaurant_db'\n    at seedDatabase (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/seed.js:21:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/seed.js:123:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-13T12:05:04.624Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:05:06.721Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:06:27.935Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:07:26.866Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-13T12:19:17.808Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-13T12:19:17.956Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-13T12:19:18.377Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-13T12:19:18.532Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-13T12:19:18.550Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-13T12:19:18.557Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-13T12:19:18.561Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-13T12:19:18.582Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-13T12:19:18.587Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-13T12:19:18.590Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-13T12:19:18.596Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-13T12:19:18.601Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-13T12:19:18.605Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-13T12:19:18.611Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-13T12:19:18.621Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-13T12:19:18.626Z"}
+{"level":"info","message":"Item Pasta Carbonara: inserted","timestamp":"2026-10-13T12:19:18.631Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-13T12:19:18.636Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-13T12:19:18.640Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-13T12:19:18.644Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-13T12:19:18.648Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-13T12:19:18.652Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-13T12:19:18.656Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-13T12:19:18.657Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-13T12:19:39.754Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-13T12:19:39.764Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-13T12:19:40.154Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-13T12:19:40.302Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-13T12:19:40.304Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-13T12:19:40.305Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-13T12:19:40.306Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-13T12:19:40.327Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-13T12:19:40.328Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-13T12:19:40.329Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-13T12:19:40.330Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-13T12:19:40.331Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-13T12:19:40.335Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-13T12:19:40.338Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-13T12:19:40.342Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-13T12:19:40.345Z"}
+{"level":"info","message":"Item Pasta Carbonara: inserted","timestamp":"2026-10-13T12:19:40.349Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-13T12:19:40.352Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-13T12:19:40.356Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-13T12:19:40.360Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-13T12:19:40.363Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-13T12:19:40.368Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-13T12:19:40.371Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-13T12:19:40.372Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-13T12:19:50.127Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-13T12:19:50.137Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-13T12:19:50.552Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-13T12:19:50.700Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-13T12:19:50.702Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-13T12:19:50.703Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-13T12:19:50.704Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-13T12:19:50.719Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-13T12:19:50.720Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-13T12:19:50.721Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-13T12:19:50.721Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-13T12:19:50.722Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-13T12:19:50.725Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-13T12:19:50.728Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-13T12:19:50.731Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-13T12:19:50.734Z"}
+{"level":"info","message":"Item Pasta Carbonara: inserted","timestamp":"2026-10-13T12:19:50.740Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-13T12:19:50.744Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-13T12:19:50.747Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-13T12:19:50.750Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-13T12:19:50.754Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-13T12:19:50.757Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-13T12:19:50.761Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-13T12:19:50.761Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:19:57.805Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-13T12:22:12.966Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-13T12:22:12.976Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-13T12:22:27.887Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-13T12:22:28.035Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-13T12:22:28.036Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-13T12:22:28.037Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-13T12:22:28.038Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-13T12:22:28.061Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-13T12:22:28.062Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-13T12:22:28.063Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-13T12:22:28.064Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-13T12:22:28.064Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-13T12:22:28.067Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-13T12:22:28.069Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-13T12:22:28.072Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-13T12:22:28.074Z"}
+{"level":"info","message":"Item Pasta Carbonara: inserted","timestamp":"2026-10-13T12:22:28.076Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-13T12:22:28.082Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-13T12:22:28.084Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-13T12:22:28.087Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-13T12:22:28.089Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-13T12:22:28.092Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-13T12:22:28.094Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-13T12:22:28.094Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:45:36.718Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T12:52:23.118Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-13T13:01:40.011Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T04:33:05.787Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T04:33:06.477Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T04:39:39.417Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:13:58.829Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:13:59.448Z"}
+{"code":"ECONNREFUSED","fatal":true,"level":"error","message":"Error creating database tables:","stack":"AggregateError: \n    at createTables (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:7:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:158:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-14T05:14:11.147Z"}
+{"code":"ECONNREFUSED","fatal":true,"level":"error","message":"Error creating database tables:","stack":"AggregateError: \n    at createTables (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:7:16)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/migrate.js:158:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)","timestamp":"2026-10-14T05:17:54.876Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-14T05:18:32.554Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-14T05:18:32.564Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-14T05:21:18.782Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-14T05:21:18.791Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:21:25.988Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-14T05:21:41.831Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-14T05:21:41.906Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-14T05:21:41.907Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-14T05:21:41.907Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-14T05:21:41.910Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-14T05:21:41.926Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-14T05:21:41.927Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-14T05:21:41.928Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-14T05:21:41.928Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-14T05:21:41.928Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-14T05:21:41.931Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-14T05:21:41.933Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-14T05:21:41.936Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-14T05:21:41.938Z"}
+{"level":"info","message":"Item Pasta Carbonara: inserted","timestamp":"2026-10-14T05:21:41.940Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-14T05:21:41.942Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-14T05:21:41.945Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-14T05:21:41.950Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-14T05:21:41.953Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-14T05:21:41.955Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-14T05:21:41.957Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-14T05:21:41.957Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:21:50.942Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:23:06.464Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T05:38:09.297Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:04:20.034Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:04:20.650Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:04:30.830Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:06:45.163Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:06:46.100Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:15:20.776Z"}
+{"level":"info","message":"Using database: restaurant_db","timestamp":"2026-10-14T06:43:28.404Z"}
+{"level":"info","message":"Database tables created successfully","timestamp":"2026-10-14T06:43:28.443Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:44:23.566Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:48:20.854Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T06:51:17.772Z"}
+{"level":"info","message":"Initialized dev email transporter (Ethereal: fb5bc62posll5t2c@ethereal.email)","timestamp":"2026-10-14T06:51:49.369Z"}
+{"level":"info","message":"OTP email dispatched to xyz@gmail.com (Message ID: <61ff814b-83de-3eca-3e83-78e888f38a20@restaurant.com>)","timestamp":"2026-10-14T06:51:54.321Z"}
+{"level":"info","message":"Preview Email URL: https://ethereal.email/message/as8miqfttlACpDeCas8mj50L.yTpBKwcAAAAATFTB8BpYeeW8gWN.SBb1CY","timestamp":"2026-10-14T06:51:54.322Z"}
+{"level":"info","message":"Welcome confirmation email dispatched to xyz@gmail.com","timestamp":"2026-10-14T06:52:40.572Z"}
+{"code":"ER_PARSE_ERROR","errno":1064,"level":"error","message":"Order creation error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sql":"SELECT id, name, price, is_available FROM menu_items WHERE id = '23c4f416-c78f-11f1-90b3-5c60ba5cbff8' FOR SHARE","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sqlState":"42000","stack":"Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:99:44\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T06:53:00.407Z"}
+{"code":"ER_PARSE_ERROR","errno":1064,"level":"error","message":"Order creation error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sql":"SELECT id, name, price, is_available FROM menu_items WHERE id = '23c4f416-c78f-11f1-90b3-5c60ba5cbff8' FOR SHARE","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sqlState":"42000","stack":"Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:99:44\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T06:53:06.391Z"}
+{"code":"ER_PARSE_ERROR","errno":1064,"level":"error","message":"Order creation error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sql":"SELECT id, name, price, is_available FROM menu_items WHERE id = '23c4f416-c78f-11f1-90b3-5c60ba5cbff8' FOR SHARE","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sqlState":"42000","stack":"Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:99:44\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T06:53:23.540Z"}
+{"level":"info","message":"Connected to database: restaurant_db","timestamp":"2026-10-14T07:06:14.013Z"}
+{"level":"info","message":"User customer@example.com: inserted","timestamp":"2026-10-14T07:06:14.171Z"}
+{"level":"info","message":"User staff@example.com: inserted","timestamp":"2026-10-14T07:06:14.173Z"}
+{"level":"info","message":"User owner@example.com: inserted","timestamp":"2026-10-14T07:06:14.174Z"}
+{"level":"info","message":"Restaurant: inserted","timestamp":"2026-10-14T07:06:14.176Z"}
+{"level":"info","message":"Tables seeded","timestamp":"2026-10-14T07:06:14.207Z"}
+{"level":"info","message":"Category Appetizers: inserted","timestamp":"2026-10-14T07:06:14.208Z"}
+{"level":"info","message":"Category Main Course: inserted","timestamp":"2026-10-14T07:06:14.209Z"}
+{"level":"info","message":"Category Desserts: inserted","timestamp":"2026-10-14T07:06:14.210Z"}
+{"level":"info","message":"Category Beverages: inserted","timestamp":"2026-10-14T07:06:14.212Z"}
+{"level":"info","message":"Item Bruschetta: inserted","timestamp":"2026-10-14T07:06:14.215Z"}
+{"level":"info","message":"Item Garlic Bread: inserted","timestamp":"2026-10-14T07:06:14.219Z"}
+{"level":"info","message":"Item Spring Rolls: inserted","timestamp":"2026-10-14T07:06:14.222Z"}
+{"level":"info","message":"Item Paneer Butter Masala: inserted","timestamp":"2026-10-14T07:06:14.226Z"}
+{"level":"info","message":"Item Butter Chicken: inserted","timestamp":"2026-10-14T07:06:14.233Z"}
+{"level":"info","message":"Item Dal Makhani: inserted","timestamp":"2026-10-14T07:06:14.237Z"}
+{"level":"info","message":"Item Hyderabadi Dum Biryani: inserted","timestamp":"2026-10-14T07:06:14.240Z"}
+{"level":"info","message":"Item Palak Paneer: inserted","timestamp":"2026-10-14T07:06:14.248Z"}
+{"level":"info","message":"Item Butter Garlic Naan Basket: inserted","timestamp":"2026-10-14T07:06:14.251Z"}
+{"level":"info","message":"Item Margherita Pizza: inserted","timestamp":"2026-10-14T07:06:14.255Z"}
+{"level":"info","message":"Item Grilled Burger: inserted","timestamp":"2026-10-14T07:06:14.258Z"}
+{"level":"info","message":"Item Chocolate Cake: inserted","timestamp":"2026-10-14T07:06:14.262Z"}
+{"level":"info","message":"Item Ice Cream Sundae: inserted","timestamp":"2026-10-14T07:06:14.265Z"}
+{"level":"info","message":"Item Fresh Lemonade: inserted","timestamp":"2026-10-14T07:06:14.269Z"}
+{"level":"info","message":"Item Masala Chai: inserted","timestamp":"2026-10-14T07:06:14.272Z"}
+{"level":"info","message":"Seeding complete — database is ready to use.","timestamp":"2026-10-14T07:06:14.272Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T07:06:18.343Z"}
+{"code":"ER_PARSE_ERROR","errno":1064,"level":"error","message":"Order creation error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sql":"SELECT id, name, price, is_available FROM menu_items WHERE id = '23c26edc-c78f-11f1-90b3-5c60ba5cbff8' FOR SHARE","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sqlState":"42000","stack":"Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:99:44\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T07:08:59.011Z"}
+{"level":"info","message":"Starting clean idempotent database seeding...","timestamp":"2026-10-14T07:12:24.793Z"}
+{"level":"info","message":"Cleared old duplicate menu items","timestamp":"2026-10-14T07:12:24.917Z"}
+{"level":"info","message":"Ensured unique key uk_cat_item_name","timestamp":"2026-10-14T07:12:24.945Z"}
+{"level":"info","message":"Users verified","timestamp":"2026-10-14T07:12:25.127Z"}
+{"code":"ER_BAD_FIELD_ERROR","errno":1054,"level":"error","message":"Error seeding database: Unknown column 'owner_id' in 'field list'","sql":"INSERT INTO restaurants (id, owner_id, name, address, phone, email)\n       VALUES ('r0000000-0000-0000-0000-000000000001', 'u0000000-0000-0000-0000-000000000003', 'Spice Garden Bistro', '12 MG Road, Indiranagar, Bengaluru', '080-23456789', 'info@spicegardenbistro.com')\n       ON DUPLICATE KEY UPDATE name = VALUES(name), address = VALUES(address)","sqlMessage":"Unknown column 'owner_id' in 'field list'","sqlState":"42S22","stack":"Error: Unknown column 'owner_id' in 'field list'\n    at seedDatabase (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/scripts/seed.js:88:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T07:12:25.128Z"}
+{"level":"info","message":"Starting clean idempotent database seeding...","timestamp":"2026-10-14T07:12:53.035Z"}
+{"level":"info","message":"Cleared old duplicate menu items","timestamp":"2026-10-14T07:12:53.123Z"}
+{"level":"info","message":"Users verified","timestamp":"2026-10-14T07:12:53.349Z"}
+{"level":"info","message":"Restaurant verified","timestamp":"2026-10-14T07:12:53.353Z"}
+{"level":"info","message":"Dining tables verified","timestamp":"2026-10-14T07:12:53.379Z"}
+{"level":"info","message":"Seeding complete — 24 unique, distinct menu items populated without duplicates.","timestamp":"2026-10-14T07:12:53.469Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <1ca771e9-2181-c528-6751-b907244e1519@gmail.com>)","timestamp":"2026-10-14T07:15:29.387Z"}
+{"level":"info","message":"Starting clean idempotent database seeding...","timestamp":"2026-10-14T07:17:59.784Z"}
+{"level":"info","message":"Cleared old duplicate menu items","timestamp":"2026-10-14T07:17:59.884Z"}
+{"level":"info","message":"Users verified","timestamp":"2026-10-14T07:18:00.072Z"}
+{"level":"info","message":"Restaurant verified","timestamp":"2026-10-14T07:18:00.073Z"}
+{"level":"info","message":"Dining tables verified","timestamp":"2026-10-14T07:18:00.080Z"}
+{"level":"info","message":"Seeding complete — 24 unique, distinct menu items populated without duplicates.","timestamp":"2026-10-14T07:18:00.170Z"}
+{"level":"info","message":"Initialized dev email transporter (Ethereal: awloshb3saefvlxl@ethereal.email)","timestamp":"2026-10-14T07:19:38.999Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <759e3674-9937-a49a-f974-9e7c8def655e@restaurant.com>)","timestamp":"2026-10-14T07:19:43.509Z"}
+{"level":"info","message":"Preview Email URL: https://ethereal.email/message/as8tEKfttlACpNrNas8tFMAYPlgYjAayAAAAAdGjQCjuiwewRK7FNALEYZM","timestamp":"2026-10-14T07:19:43.511Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <8b516a4f-f9fd-42c0-cfee-e2b802e9b819@restaurant.com>)","timestamp":"2026-10-14T07:21:26.929Z"}
+{"level":"info","message":"Preview Email URL: https://ethereal.email/message/as8tEKfttlACpNrNas8tfJ0L.yTpBK77AAAAAn.yqQCOIXcn4hcdwHMCrwo","timestamp":"2026-10-14T07:21:26.930Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <08e728ce-8601-7720-7082-acb7c468c1b8@restaurant.com>)","timestamp":"2026-10-14T07:22:00.616Z"}
+{"level":"info","message":"Preview Email URL: https://ethereal.email/message/as8tEKfttlACpNrNas8tnVz99noLd.BrAAAAA4bgjRHquiXhxuvyISC0U5A","timestamp":"2026-10-14T07:22:00.616Z"}
+{"level":"info","message":"Welcome confirmation email dispatched to tempmailh23@gmail.com","timestamp":"2026-10-14T07:23:51.077Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T07:25:05.352Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <2641184e-8597-efe1-fefd-274f286d45d6@gmail.com>)","timestamp":"2026-10-14T07:28:19.730Z"}
+{"level":"info","message":"Welcome confirmation email dispatched to tempmailh23@gmail.com","timestamp":"2026-10-14T07:28:40.336Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T07:31:55.627Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T07:32:01.963Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <abbb3d53-2623-20e2-579f-db1cb7b53508@gmail.com>)","timestamp":"2026-10-14T07:37:08.447Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T12:13:04.497Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T12:13:05.198Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T12:17:35.837Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <a1aa8819-2187-f4ca-310f-389d2486dce2@gmail.com>)","timestamp":"2026-10-14T12:23:53.660Z"}
+{"level":"info","message":"Welcome confirmation email dispatched to tempmailh23@gmail.com","timestamp":"2026-10-14T12:24:20.235Z"}
+{"code":"ER_PARSE_ERROR","errno":1064,"level":"error","message":"Order creation error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sql":"SELECT id, name, price, is_available FROM menu_items WHERE id = 'i-main-003' FOR SHARE","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1","sqlState":"42000","stack":"Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHARE' at line 1\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:99:44\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","timestamp":"2026-10-14T12:24:30.190Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-14T12:29:58.925Z"}
+{"level":"info","message":"New client connected: 7sc-e-ugnaaoI8F-AAAA","timestamp":"2026-10-14T12:30:46.207Z"}
+{"level":"info","message":"Client disconnected: 7sc-e-ugnaaoI8F-AAAA","timestamp":"2026-10-14T12:32:13.411Z"}
+{"level":"info","message":"New client connected: CVtLJL3fswZrpioxAAAB","timestamp":"2026-10-14T12:32:13.442Z"}
+{"level":"info","message":"Client disconnected: CVtLJL3fswZrpioxAAAB","timestamp":"2026-10-14T12:36:55.731Z"}
+{"level":"info","message":"New client connected: RFG7HnWKL8oJprVoAAAC","timestamp":"2026-10-14T12:48:13.284Z"}
+{"level":"info","message":"Client disconnected: RFG7HnWKL8oJprVoAAAC","timestamp":"2026-10-14T12:49:09.662Z"}
+{"level":"info","message":"New client connected: AG4g0AnIDRHee2FeAAAD","timestamp":"2026-10-14T12:49:09.699Z"}
+{"level":"info","message":"Client disconnected: AG4g0AnIDRHee2FeAAAD","timestamp":"2026-10-14T12:51:02.344Z"}
+{"level":"info","message":"New client connected: cDoV9AhV5pahTx04AAAE","timestamp":"2026-10-14T12:55:17.107Z"}
+{"level":"info","message":"Client disconnected: cDoV9AhV5pahTx04AAAE","timestamp":"2026-10-14T12:55:25.402Z"}
+{"level":"info","message":"New client connected: UPaPa0N1oMBPHlJuAAAF","timestamp":"2026-10-14T12:56:53.409Z"}
+{"level":"info","message":"Client disconnected: UPaPa0N1oMBPHlJuAAAF","timestamp":"2026-10-14T12:57:26.437Z"}
+{"level":"info","message":"New client connected: NDzn2gZ3ZY7FSsvkAAAG","timestamp":"2026-10-14T12:57:31.330Z"}
+{"level":"info","message":"Client disconnected: NDzn2gZ3ZY7FSsvkAAAG","timestamp":"2026-10-14T12:57:33.140Z"}
+{"level":"info","message":"New client connected: 1a-a5tQcYlaJcuveAAAH","timestamp":"2026-10-14T12:57:33.214Z"}
+{"level":"info","message":"Client disconnected: 1a-a5tQcYlaJcuveAAAH","timestamp":"2026-10-14T12:57:45.159Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <fba65ee5-d814-8480-e3ff-4009e30356f4@gmail.com>)","timestamp":"2026-10-14T12:58:01.803Z"}
+{"level":"info","message":"New client connected: SQe4_Hfy8ohe5y56AAAI","timestamp":"2026-10-14T13:02:40.003Z"}
+{"level":"info","message":"Client disconnected: SQe4_Hfy8ohe5y56AAAI","timestamp":"2026-10-14T13:03:04.957Z"}
+{"level":"info","message":"New client connected: rqkyVZggxB5zDryCAAAJ","timestamp":"2026-10-14T13:03:06.338Z"}
+{"level":"info","message":"Client disconnected: rqkyVZggxB5zDryCAAAJ","timestamp":"2026-10-14T13:03:09.228Z"}
+{"level":"info","message":"New client connected: h830P_pONf__2JCrAAAK","timestamp":"2026-10-14T13:04:53.222Z"}
+{"level":"info","message":"Client disconnected: h830P_pONf__2JCrAAAK","timestamp":"2026-10-14T13:05:26.111Z"}
+{"level":"info","message":"New client connected: nroEd7Q8gAouZ7c1AAAL","timestamp":"2026-10-14T13:05:26.140Z"}
+{"level":"info","message":"Client disconnected: nroEd7Q8gAouZ7c1AAAL","timestamp":"2026-10-14T13:05:33.642Z"}
+{"level":"info","message":"New client connected: jF5yIEcndxnjwH4zAAAM","timestamp":"2026-10-14T13:05:33.663Z"}
+{"level":"info","message":"Client disconnected: jF5yIEcndxnjwH4zAAAM","timestamp":"2026-10-14T13:07:09.221Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T09:11:16.816Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T09:11:17.705Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T09:14:41.659Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T09:16:03.373Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <c3f8a93b-3a1b-431a-6fe3-e799304fa7ec@gmail.com>)","timestamp":"2026-10-15T09:16:20.697Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:05:08.041Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:05:20.763Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:06:09.479Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:06:36.477Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:06:51.535Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:07:16.528Z"}
+{"level":"info","message":"New client connected: IUVTL4-yHn3o8VESAAAA","timestamp":"2026-10-15T10:19:35.403Z"}
+{"level":"info","message":"Client disconnected: IUVTL4-yHn3o8VESAAAA","timestamp":"2026-10-15T10:19:41.029Z"}
+{"level":"info","message":"New client connected: JL1b2t-6X7xDFjArAAAB","timestamp":"2026-10-15T10:19:44.639Z"}
+{"level":"info","message":"Client disconnected: JL1b2t-6X7xDFjArAAAB","timestamp":"2026-10-15T10:20:12.851Z"}
+{"level":"info","message":"New client connected: V07LfVaXPxIkkA8gAAAC","timestamp":"2026-10-15T10:20:16.415Z"}
+{"level":"info","message":"New client connected: eQBoqMYnOvpKCODPAAAD","timestamp":"2026-10-15T10:21:41.741Z"}
+{"level":"info","message":"New client connected: N9ooMJ4VjvuSf8NQAAAE","timestamp":"2026-10-15T10:21:41.748Z"}
+{"level":"info","message":"Client disconnected: V07LfVaXPxIkkA8gAAAC","timestamp":"2026-10-15T10:22:28.117Z"}
+{"level":"info","message":"Client disconnected: eQBoqMYnOvpKCODPAAAD","timestamp":"2026-10-15T10:22:28.122Z"}
+{"level":"info","message":"Client disconnected: N9ooMJ4VjvuSf8NQAAAE","timestamp":"2026-10-15T10:22:28.123Z"}
+{"level":"info","message":"New client connected: WYKJZ8RnOklbPdN1AAAF","timestamp":"2026-10-15T10:22:28.188Z"}
+{"level":"info","message":"Client disconnected: WYKJZ8RnOklbPdN1AAAF","timestamp":"2026-10-15T10:22:39.217Z"}
+{"level":"info","message":"New client connected: x-MNEnSEHFg-twF2AAAG","timestamp":"2026-10-15T10:23:30.371Z"}
+{"level":"info","message":"Client disconnected: x-MNEnSEHFg-twF2AAAG","timestamp":"2026-10-15T10:23:40.552Z"}
+{"level":"info","message":"New client connected: MTP1WymevDBKakcrAAAH","timestamp":"2026-10-15T10:23:40.579Z"}
+{"level":"info","message":"Client disconnected: MTP1WymevDBKakcrAAAH","timestamp":"2026-10-15T10:23:43.457Z"}
+{"level":"info","message":"New client connected: 0pZN_e9U5hqcnSLjAAAI","timestamp":"2026-10-15T10:23:43.485Z"}
+{"level":"info","message":"New client connected: alYmaLDD78FjBZnKAAAJ","timestamp":"2026-10-15T10:23:45.000Z"}
+{"level":"info","message":"New client connected: kaHGmCpnGsahzSJSAAAK","timestamp":"2026-10-15T10:23:51.218Z"}
+{"level":"info","message":"Client disconnected: 0pZN_e9U5hqcnSLjAAAI","timestamp":"2026-10-15T10:24:14.557Z"}
+{"level":"info","message":"Client disconnected: alYmaLDD78FjBZnKAAAJ","timestamp":"2026-10-15T10:24:14.557Z"}
+{"level":"info","message":"Client disconnected: kaHGmCpnGsahzSJSAAAK","timestamp":"2026-10-15T10:24:14.557Z"}
+{"level":"info","message":"New client connected: jL-kORqEG4IlKuIOAAAL","timestamp":"2026-10-15T10:25:07.641Z"}
+{"level":"info","message":"Client disconnected: jL-kORqEG4IlKuIOAAAL","timestamp":"2026-10-15T10:25:10.490Z"}
+{"level":"info","message":"New client connected: cEasuaNfp13aB9vbAAAM","timestamp":"2026-10-15T10:25:10.513Z"}
+{"level":"info","message":"Client disconnected: cEasuaNfp13aB9vbAAAM","timestamp":"2026-10-15T10:25:11.013Z"}
+{"level":"info","message":"New client connected: fY7ZU24wOEDHqOFwAAAN","timestamp":"2026-10-15T10:25:11.032Z"}
+{"level":"info","message":"Client disconnected: fY7ZU24wOEDHqOFwAAAN","timestamp":"2026-10-15T10:25:11.431Z"}
+{"level":"info","message":"New client connected: qRpMI3Fhi6f73L4RAAAO","timestamp":"2026-10-15T10:25:11.452Z"}
+{"level":"info","message":"New client connected: zQ63E_6tH6BEj_Z2AAAP","timestamp":"2026-10-15T10:25:16.194Z"}
+{"level":"info","message":"New client connected: JC7hzu29419pZvBnAAAQ","timestamp":"2026-10-15T10:25:17.360Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:29:00.908Z"}
+{"level":"info","message":"New client connected: fu3NgNhL23yFBSAiAAAA","timestamp":"2026-10-15T10:29:01.304Z"}
+{"level":"info","message":"New client connected: 2gWAUEBciM32BeGPAAAB","timestamp":"2026-10-15T10:29:01.306Z"}
+{"level":"info","message":"New client connected: nqEebOV-vJYwq0OSAAAC","timestamp":"2026-10-15T10:29:01.308Z"}
+{"level":"info","message":"Client disconnected: 2gWAUEBciM32BeGPAAAB","timestamp":"2026-10-15T10:29:22.212Z"}
+{"level":"info","message":"Client disconnected: fu3NgNhL23yFBSAiAAAA","timestamp":"2026-10-15T10:29:22.213Z"}
+{"level":"info","message":"Client disconnected: nqEebOV-vJYwq0OSAAAC","timestamp":"2026-10-15T10:29:22.214Z"}
+{"level":"info","message":"New client connected: JDu9LxBVu35sYEzXAAAD","timestamp":"2026-10-15T10:29:22.230Z"}
+{"level":"info","message":"New client connected: uQQk5U1-nmj1DFvvAAAE","timestamp":"2026-10-15T10:29:22.264Z"}
+{"level":"info","message":"New client connected: _Vre8v6o7yOn8rHfAAAF","timestamp":"2026-10-15T10:29:22.267Z"}
+{"level":"info","message":"Client disconnected: JDu9LxBVu35sYEzXAAAD","timestamp":"2026-10-15T10:29:56.550Z"}
+{"level":"info","message":"New client connected: nILPLVStcEEnwvy1AAAG","timestamp":"2026-10-15T10:29:56.580Z"}
+{"level":"info","message":"Client disconnected: nILPLVStcEEnwvy1AAAG","timestamp":"2026-10-15T10:30:20.674Z"}
+{"level":"info","message":"New client connected: GunoVCShbA8hX1EKAAAH","timestamp":"2026-10-15T10:30:21.159Z"}
+{"level":"info","message":"OTP email dispatched to tempmailh23@gmail.com (Message ID: <4c34245a-5d00-47e1-bd65-3844dba781a7@gmail.com>)","timestamp":"2026-10-15T10:32:49.112Z"}
+{"level":"info","message":"New client connected: RkrTkj5C2-1dchsHAAAI","timestamp":"2026-10-15T10:33:14.978Z"}
+{"level":"info","message":"Client disconnected: GunoVCShbA8hX1EKAAAH","timestamp":"2026-10-15T10:34:24.488Z"}
+{"level":"info","message":"Client disconnected: uQQk5U1-nmj1DFvvAAAE","timestamp":"2026-10-15T10:34:24.489Z"}
+{"level":"info","message":"Client disconnected: _Vre8v6o7yOn8rHfAAAF","timestamp":"2026-10-15T10:34:24.489Z"}
+{"level":"info","message":"New client connected: pqwDC6lF1u04lYvlAAAJ","timestamp":"2026-10-15T10:34:25.960Z"}
+{"level":"info","message":"Client disconnected: pqwDC6lF1u04lYvlAAAJ","timestamp":"2026-10-15T10:34:33.327Z"}
+{"level":"info","message":"New client connected: comCIwBjSCQMbrVsAAAK","timestamp":"2026-10-15T10:34:33.348Z"}
+{"level":"info","message":"Client disconnected: comCIwBjSCQMbrVsAAAK","timestamp":"2026-10-15T10:35:09.975Z"}
+{"level":"info","message":"New client connected: _0RgL2Cdzhea2PRxAAAL","timestamp":"2026-10-15T10:35:13.434Z"}
+{"level":"info","message":"New client connected: 79Ydqf6zbwQWlW1FAAAM","timestamp":"2026-10-15T10:35:18.246Z"}
+{"level":"info","message":"New client connected: WnWf7spF0FPOoePPAAAN","timestamp":"2026-10-15T10:35:20.188Z"}
+{"level":"info","message":"Client disconnected: _0RgL2Cdzhea2PRxAAAL","timestamp":"2026-10-15T10:35:25.198Z"}
+{"level":"info","message":"New client connected: C-JgKQIALz-WQkGbAAAO","timestamp":"2026-10-15T10:35:25.231Z"}
+{"level":"info","message":"Client disconnected: C-JgKQIALz-WQkGbAAAO","timestamp":"2026-10-15T10:38:59.216Z"}
+{"level":"info","message":"Client disconnected: 79Ydqf6zbwQWlW1FAAAM","timestamp":"2026-10-15T10:38:59.217Z"}
+{"level":"info","message":"Client disconnected: WnWf7spF0FPOoePPAAAN","timestamp":"2026-10-15T10:38:59.219Z"}
+{"level":"info","message":"New client connected: uyirWzYEL3O5r_daAAAP","timestamp":"2026-10-15T10:39:02.519Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T10:39:10.762Z"}
+{"level":"info","message":"New client connected: rev3K4QAqXqgSRo0AAAA","timestamp":"2026-10-15T10:39:11.132Z"}
+{"level":"info","message":"New client connected: PQN47SyWlJTtTbM9AAAB","timestamp":"2026-10-15T10:39:14.410Z"}
+{"level":"info","message":"Client disconnected: PQN47SyWlJTtTbM9AAAB","timestamp":"2026-10-15T10:39:17.377Z"}
+{"level":"info","message":"New client connected: AzjsuFUNfRmwxY-GAAAC","timestamp":"2026-10-15T10:39:17.391Z"}
+{"level":"info","message":"Client disconnected: AzjsuFUNfRmwxY-GAAAC","timestamp":"2026-10-15T10:39:54.059Z"}
+{"level":"info","message":"New client connected: lr-dVACSbaJPT_u4AAAD","timestamp":"2026-10-15T10:39:54.084Z"}
+{"level":"info","message":"Client disconnected: lr-dVACSbaJPT_u4AAAD","timestamp":"2026-10-15T10:39:56.606Z"}
+{"level":"info","message":"New client connected: DJGRtrrBWaZIkxqaAAAE","timestamp":"2026-10-15T10:39:56.632Z"}
+{"level":"info","message":"Client disconnected: DJGRtrrBWaZIkxqaAAAE","timestamp":"2026-10-15T10:39:58.835Z"}
+{"level":"info","message":"New client connected: IUguFQTN4mYNOBQ3AAAF","timestamp":"2026-10-15T10:39:59.159Z"}
+{"level":"info","message":"Client disconnected: IUguFQTN4mYNOBQ3AAAF","timestamp":"2026-10-15T10:40:07.481Z"}
+{"level":"info","message":"New client connected: uI840xRJguyA61xwAAAG","timestamp":"2026-10-15T10:40:07.491Z"}
+{"level":"info","message":"Client disconnected: uI840xRJguyA61xwAAAG","timestamp":"2026-10-15T10:40:23.546Z"}
+{"level":"info","message":"New client connected: TchknfDRLsM63pNyAAAH","timestamp":"2026-10-15T10:40:23.565Z"}
+{"level":"info","message":"New client connected: xzbCVmvQUdqI-VPNAAAI","timestamp":"2026-10-15T10:40:37.692Z"}
+{"level":"info","message":"Client disconnected: TchknfDRLsM63pNyAAAH","timestamp":"2026-10-15T10:40:43.515Z"}
+{"level":"info","message":"New client connected: CmIOgEUMhTdPkBTGAAAJ","timestamp":"2026-10-15T10:40:43.537Z"}
+{"level":"info","message":"Client disconnected: CmIOgEUMhTdPkBTGAAAJ","timestamp":"2026-10-15T10:41:00.059Z"}
+{"level":"info","message":"New client connected: z_ZvttjfH0OzhfiQAAAK","timestamp":"2026-10-15T10:41:00.080Z"}
+{"level":"info","message":"Client disconnected: rev3K4QAqXqgSRo0AAAA","timestamp":"2026-10-15T10:41:46.963Z"}
+{"level":"info","message":"New client connected: oq9WOD_grsJm1KvTAAAL","timestamp":"2026-10-15T10:42:04.113Z"}
+{"level":"info","message":"Client disconnected: oq9WOD_grsJm1KvTAAAL","timestamp":"2026-10-15T10:42:12.405Z"}
+{"level":"info","message":"New client connected: s3gG7SzaSSxnPDdkAAAM","timestamp":"2026-10-15T10:42:12.708Z"}
+{"level":"info","message":"Client disconnected: s3gG7SzaSSxnPDdkAAAM","timestamp":"2026-10-15T10:43:59.193Z"}
+{"level":"info","message":"New client connected: 51SFIV1n9-GZRLYsAAAN","timestamp":"2026-10-15T10:43:59.685Z"}
+{"level":"info","message":"Client disconnected: 51SFIV1n9-GZRLYsAAAN","timestamp":"2026-10-15T10:44:04.957Z"}
+{"level":"info","message":"New client connected: mvPGJ5PTezuXEuUsAAAO","timestamp":"2026-10-15T10:44:05.113Z"}
+{"level":"info","message":"New client connected: nuNMpNwy7SFHGVV0AAAP","timestamp":"2026-10-15T10:44:05.117Z"}
+{"level":"info","message":"Client disconnected: z_ZvttjfH0OzhfiQAAAK","timestamp":"2026-10-15T10:45:21.537Z"}
+{"level":"info","message":"Client disconnected: xzbCVmvQUdqI-VPNAAAI","timestamp":"2026-10-15T10:45:21.539Z"}
+{"level":"info","message":"New client connected: AgX8AHtGByjjKkghAAAQ","timestamp":"2026-10-15T10:45:24.934Z"}
+{"level":"info","message":"Client disconnected: AgX8AHtGByjjKkghAAAQ","timestamp":"2026-10-15T10:45:26.841Z"}
+{"level":"info","message":"New client connected: o0RUdaOiho9KdfW5AAAR","timestamp":"2026-10-15T10:45:26.866Z"}
+{"level":"info","message":"New client connected: HUPubKXhhSJv-wn-AAAS","timestamp":"2026-10-15T10:45:31.929Z"}
+{"level":"info","message":"Client disconnected: nuNMpNwy7SFHGVV0AAAP","timestamp":"2026-10-15T10:45:49.504Z"}
+{"level":"info","message":"Client disconnected: mvPGJ5PTezuXEuUsAAAO","timestamp":"2026-10-15T10:45:49.517Z"}
+{"level":"info","message":"New client connected: WIreEP_JgKUbGRcMAAAT","timestamp":"2026-10-15T10:45:56.712Z"}
+{"level":"info","message":"Client disconnected: o0RUdaOiho9KdfW5AAAR","timestamp":"2026-10-15T10:45:57.221Z"}
+{"level":"info","message":"Client disconnected: HUPubKXhhSJv-wn-AAAS","timestamp":"2026-10-15T10:45:57.223Z"}
+{"level":"info","message":"New client connected: HjahErAAKCr10ac8AAAU","timestamp":"2026-10-15T10:45:57.357Z"}
+{"level":"info","message":"Client disconnected: HjahErAAKCr10ac8AAAU","timestamp":"2026-10-15T10:46:05.095Z"}
+{"level":"info","message":"New client connected: bsz3lex13tJuJ42FAAAV","timestamp":"2026-10-15T10:46:05.155Z"}
+{"level":"info","message":"New client connected: CifMGy8r3K6UsFB-AAAW","timestamp":"2026-10-15T10:46:10.838Z"}
+{"level":"info","message":"Client disconnected: bsz3lex13tJuJ42FAAAV","timestamp":"2026-10-15T10:46:24.501Z"}
+{"level":"info","message":"New client connected: 5w68-seKjvKGmXwiAAAX","timestamp":"2026-10-15T10:46:24.557Z"}
+{"level":"info","message":"Client disconnected: CifMGy8r3K6UsFB-AAAW","timestamp":"2026-10-15T10:46:46.783Z"}
+{"level":"info","message":"New client connected: eX3vqsabCHCGvojvAAAY","timestamp":"2026-10-15T10:46:46.947Z"}
+{"level":"info","message":"Client disconnected: eX3vqsabCHCGvojvAAAY","timestamp":"2026-10-15T10:46:56.308Z"}
+{"level":"info","message":"New client connected: GNNAHAyU3rIYf21xAAAZ","timestamp":"2026-10-15T10:46:56.345Z"}
+{"level":"info","message":"New client connected: 27E5lE2T_HnGnwC3AAAa","timestamp":"2026-10-15T10:46:57.925Z"}
+{"level":"info","message":"Client disconnected: 27E5lE2T_HnGnwC3AAAa","timestamp":"2026-10-15T10:47:00.465Z"}
+{"level":"info","message":"New client connected: 3gyqa7Q1vsYFP7_WAAAb","timestamp":"2026-10-15T10:47:00.487Z"}
+{"level":"info","message":"New client connected: eQ5mQ3efiaTbBurEAAAc","timestamp":"2026-10-15T10:47:54.493Z"}
+{"level":"info","message":"Client disconnected: 5w68-seKjvKGmXwiAAAX","timestamp":"2026-10-15T10:48:18.613Z"}
+{"level":"info","message":"Client disconnected: eQ5mQ3efiaTbBurEAAAc","timestamp":"2026-10-15T10:48:18.614Z"}
+{"level":"info","message":"Client disconnected: 3gyqa7Q1vsYFP7_WAAAb","timestamp":"2026-10-15T10:48:18.614Z"}
+{"level":"info","message":"New client connected: A3wCFR48Y8wuc4U7AAAd","timestamp":"2026-10-15T10:48:46.048Z"}
+{"level":"info","message":"New client connected: lVUMCy1RWN7bldLwAAAe","timestamp":"2026-10-15T10:48:46.056Z"}
+{"level":"info","message":"New client connected: auN4B8l9qJtAKX0VAAAf","timestamp":"2026-10-15T10:48:46.060Z"}
+{"level":"info","message":"Client disconnected: lVUMCy1RWN7bldLwAAAe","timestamp":"2026-10-15T10:48:55.966Z"}
+{"level":"info","message":"Client disconnected: auN4B8l9qJtAKX0VAAAf","timestamp":"2026-10-15T10:48:55.968Z"}
+{"level":"info","message":"Client disconnected: A3wCFR48Y8wuc4U7AAAd","timestamp":"2026-10-15T10:48:55.968Z"}
+{"level":"info","message":"New client connected: JwGsrcFudNumifTtAAAg","timestamp":"2026-10-15T10:48:59.763Z"}
+{"level":"info","message":"Client disconnected: JwGsrcFudNumifTtAAAg","timestamp":"2026-10-15T10:49:56.145Z"}
+{"level":"info","message":"New client connected: 5Z5BeCZE732ncQCJAAAh","timestamp":"2026-10-15T10:49:59.919Z"}
+{"level":"info","message":"Client disconnected: 5Z5BeCZE732ncQCJAAAh","timestamp":"2026-10-15T10:50:26.643Z"}
+{"level":"info","message":"New client connected: 2Hye9LOv-CpI9XVLAAAi","timestamp":"2026-10-15T10:53:22.403Z"}
+{"level":"info","message":"Client disconnected: 2Hye9LOv-CpI9XVLAAAi","timestamp":"2026-10-15T10:53:27.219Z"}
+{"level":"info","message":"New client connected: 1dsAL8_7GJ7rpCzFAAAj","timestamp":"2026-10-15T10:53:27.249Z"}
+{"level":"info","message":"Client disconnected: 1dsAL8_7GJ7rpCzFAAAj","timestamp":"2026-10-15T10:53:38.986Z"}
+{"level":"info","message":"New client connected: heKYK85SvGipkMjaAAAk","timestamp":"2026-10-15T10:53:55.997Z"}
+{"level":"info","message":"Client disconnected: heKYK85SvGipkMjaAAAk","timestamp":"2026-10-15T10:54:07.637Z"}
+{"level":"info","message":"New client connected: 3qIVx3A5TTvUaqr4AAAl","timestamp":"2026-10-15T10:54:39.519Z"}
+{"level":"info","message":"Client disconnected: GNNAHAyU3rIYf21xAAAZ","timestamp":"2026-10-15T10:55:28.133Z"}
+{"level":"info","message":"Client disconnected: WIreEP_JgKUbGRcMAAAT","timestamp":"2026-10-15T10:55:28.139Z"}
+{"level":"info","message":"New client connected: liL0-Lnu6dr78rTNAAAm","timestamp":"2026-10-15T10:55:34.279Z"}
+{"level":"info","message":"Client disconnected: 3qIVx3A5TTvUaqr4AAAl","timestamp":"2026-10-15T11:02:37.872Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T11:04:47.220Z"}
+{"level":"info","message":"New client connected: jIMspUQbz9Hr-YbqAAAA","timestamp":"2026-10-15T11:04:47.905Z"}
+{"level":"info","message":"Client disconnected: jIMspUQbz9Hr-YbqAAAA","timestamp":"2026-10-15T11:12:27.222Z"}
+{"level":"info","message":"New client connected: XpIZicE1J3OZhPGlAAAB","timestamp":"2026-10-15T11:12:52.046Z"}
+{"level":"info","message":"Client disconnected: XpIZicE1J3OZhPGlAAAB","timestamp":"2026-10-15T11:13:46.674Z"}
+{"level":"info","message":"New client connected: QpiwXoP02-w0pUJTAAAC","timestamp":"2026-10-15T11:14:03.889Z"}
+{"level":"info","message":"New client connected: M2NTolW-0Qkz_lt3AAAD","timestamp":"2026-10-15T11:14:41.009Z"}
+{"level":"info","message":"Client disconnected: QpiwXoP02-w0pUJTAAAC","timestamp":"2026-10-15T11:14:59.612Z"}
+{"level":"info","message":"New client connected: 32-MkT6BLdcCpFc4AAAE","timestamp":"2026-10-15T11:15:07.392Z"}
+{"level":"info","message":"Client disconnected: 32-MkT6BLdcCpFc4AAAE","timestamp":"2026-10-15T11:16:03.887Z"}
+{"level":"info","message":"New client connected: MZO8ZjkVPREsyG5nAAAF","timestamp":"2026-10-15T11:16:09.446Z"}
+{"level":"info","message":"Client disconnected: M2NTolW-0Qkz_lt3AAAD","timestamp":"2026-10-15T11:17:31.369Z"}
+{"level":"info","message":"New client connected: -LVLIq8ob1wIvfjKAAAG","timestamp":"2026-10-15T11:18:26.246Z"}
+{"level":"info","message":"Client disconnected: -LVLIq8ob1wIvfjKAAAG","timestamp":"2026-10-15T11:19:31.910Z"}
+{"level":"info","message":"New client connected: LSXO5qVz2gsDG5QyAAAH","timestamp":"2026-10-15T11:19:39.416Z"}
+{"level":"info","message":"Client disconnected: LSXO5qVz2gsDG5QyAAAH","timestamp":"2026-10-15T11:19:50.120Z"}
+{"level":"info","message":"New client connected: 2S84vc71UDtUSwpgAAAI","timestamp":"2026-10-15T11:20:43.638Z"}
+{"level":"info","message":"Client disconnected: 2S84vc71UDtUSwpgAAAI","timestamp":"2026-10-15T11:20:55.629Z"}
+{"level":"info","message":"New client connected: SJ2raKIBq8dzsfJYAAAJ","timestamp":"2026-10-15T11:21:01.709Z"}
+{"level":"info","message":"Client disconnected: MZO8ZjkVPREsyG5nAAAF","timestamp":"2026-10-15T11:21:13.662Z"}
+{"level":"info","message":"New client connected: vlvn2QRYwcyjrhxqAAAK","timestamp":"2026-10-15T11:21:26.931Z"}
+{"level":"info","message":"Client disconnected: vlvn2QRYwcyjrhxqAAAK","timestamp":"2026-10-15T11:23:16.446Z"}
+{"level":"info","message":"Client disconnected: SJ2raKIBq8dzsfJYAAAJ","timestamp":"2026-10-15T11:23:16.447Z"}
+{"level":"info","message":"New client connected: 0LNxcTKtfLfa-6yWAAAL","timestamp":"2026-10-15T11:23:35.784Z"}
+{"level":"info","message":"Client disconnected: 0LNxcTKtfLfa-6yWAAAL","timestamp":"2026-10-15T11:23:47.739Z"}
+{"level":"info","message":"New client connected: vs7DWIv-Bn81P-wLAAAM","timestamp":"2026-10-15T11:23:57.776Z"}
+{"level":"info","message":"New client connected: ZtA87e4MUIGkW_n1AAAN","timestamp":"2026-10-15T11:24:01.320Z"}
+{"level":"info","message":"Client disconnected: vs7DWIv-Bn81P-wLAAAM","timestamp":"2026-10-15T11:24:12.463Z"}
+{"level":"info","message":"New client connected: E3i3H7JvG7fdGrG1AAAO","timestamp":"2026-10-15T11:24:17.148Z"}
+{"level":"info","message":"Client disconnected: E3i3H7JvG7fdGrG1AAAO","timestamp":"2026-10-15T11:29:30.309Z"}
+{"level":"info","message":"New client connected: aPSBPupA4ZBu_SKsAAAP","timestamp":"2026-10-15T11:29:39.544Z"}
+{"level":"info","message":"Client disconnected: aPSBPupA4ZBu_SKsAAAP","timestamp":"2026-10-15T11:30:04.568Z"}
+{"level":"info","message":"New client connected: 6hppV34J_4duO5l7AAAQ","timestamp":"2026-10-15T11:30:10.321Z"}
+{"level":"info","message":"New client connected: ZUBu31uuhr_iWbgzAAAR","timestamp":"2026-10-15T11:30:13.545Z"}
+{"level":"info","message":"Client disconnected: ZtA87e4MUIGkW_n1AAAN","timestamp":"2026-10-15T11:30:41.120Z"}
+{"level":"info","message":"New client connected: -g57-JIUFx5PKjLoAAAS","timestamp":"2026-10-15T11:30:53.599Z"}
+{"level":"info","message":"Client disconnected: 6hppV34J_4duO5l7AAAQ","timestamp":"2026-10-15T11:33:28.532Z"}
+{"level":"info","message":"Client disconnected: ZUBu31uuhr_iWbgzAAAR","timestamp":"2026-10-15T11:33:28.538Z"}
+{"level":"info","message":"New client connected: M-CWpqdgW2kgdR-TAAAT","timestamp":"2026-10-15T11:35:42.558Z"}
+{"level":"info","message":"New client connected: EvWqX1RZ6mydGE-yAAAU","timestamp":"2026-10-15T11:35:42.568Z"}
+{"level":"info","message":"Client disconnected: M-CWpqdgW2kgdR-TAAAT","timestamp":"2026-10-15T11:35:43.841Z"}
+{"level":"info","message":"Client disconnected: EvWqX1RZ6mydGE-yAAAU","timestamp":"2026-10-15T11:35:43.851Z"}
+{"level":"info","message":"New client connected: uN3QW_d1ypqej0VrAAAV","timestamp":"2026-10-15T11:35:50.248Z"}
+{"level":"info","message":"Client disconnected: uN3QW_d1ypqej0VrAAAV","timestamp":"2026-10-15T11:36:52.052Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T11:40:55.461Z"}
+{"level":"info","message":"New client connected: CIkqOZ13JRIDU_FPAAAA","timestamp":"2026-10-15T11:40:56.450Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T11:41:38.535Z"}
+{"level":"info","message":"New client connected: dt5AkTDXz-9O0qCcAAAA","timestamp":"2026-10-15T11:41:38.885Z"}
+{"level":"info","message":"New client connected: BV03TWp9zLszL8xcAAAB","timestamp":"2026-10-15T11:42:37.923Z"}
+{"level":"info","message":"Client disconnected: BV03TWp9zLszL8xcAAAB","timestamp":"2026-10-15T11:42:39.944Z"}
+{"level":"info","message":"New client connected: YV9jk8nu97_XSDA5AAAC","timestamp":"2026-10-15T11:42:45.849Z"}
+{"level":"info","message":"Client disconnected: YV9jk8nu97_XSDA5AAAC","timestamp":"2026-10-15T11:43:09.716Z"}
+{"level":"info","message":"New client connected: 4rSi96gUDfUaq-v1AAAD","timestamp":"2026-10-15T11:46:28.320Z"}
+{"level":"info","message":"Client disconnected: 4rSi96gUDfUaq-v1AAAD","timestamp":"2026-10-15T11:47:15.982Z"}
+{"level":"info","message":"New client connected: XUyErbYy-mlR8teIAAAE","timestamp":"2026-10-15T11:47:20.315Z"}
+{"level":"info","message":"Client disconnected: dt5AkTDXz-9O0qCcAAAA","timestamp":"2026-10-15T11:47:23.892Z"}
+{"level":"info","message":"New client connected: hvOc6FsKFd4HY8CQAAAF","timestamp":"2026-10-15T11:47:41.223Z"}
+{"level":"info","message":"New client connected: 2yHS_klJmeBhsVLNAAAG","timestamp":"2026-10-15T11:50:35.681Z"}
+{"level":"info","message":"Client disconnected: hvOc6FsKFd4HY8CQAAAF","timestamp":"2026-10-15T11:51:19.736Z"}
+{"level":"info","message":"Client disconnected: 2yHS_klJmeBhsVLNAAAG","timestamp":"2026-10-15T11:51:19.760Z"}
+{"level":"info","message":"New client connected: oO5BKjB4CEueWBZzAAAH","timestamp":"2026-10-15T11:51:32.243Z"}
+{"level":"info","message":"Client disconnected: XUyErbYy-mlR8teIAAAE","timestamp":"2026-10-15T11:53:51.327Z"}
+{"level":"info","message":"New client connected: pkWyYtJdSY96LUR6AAAI","timestamp":"2026-10-15T11:53:51.371Z"}
+{"level":"info","message":"Client disconnected: pkWyYtJdSY96LUR6AAAI","timestamp":"2026-10-15T11:53:51.975Z"}
+{"level":"info","message":"New client connected: gUXuPwjSmzwHMcTSAAAJ","timestamp":"2026-10-15T11:53:51.998Z"}
+{"level":"info","message":"Client disconnected: gUXuPwjSmzwHMcTSAAAJ","timestamp":"2026-10-15T11:53:53.186Z"}
+{"level":"info","message":"New client connected: kTXneJJjoal4e5bLAAAK","timestamp":"2026-10-15T11:53:53.210Z"}
+{"level":"info","message":"Client disconnected: kTXneJJjoal4e5bLAAAK","timestamp":"2026-10-15T11:53:54.514Z"}
+{"level":"info","message":"New client connected: A-w8A2SGjt03y8DgAAAL","timestamp":"2026-10-15T11:53:54.540Z"}
+{"level":"info","message":"New client connected: 1_VupFbAlx1myUkbAAAM","timestamp":"2026-10-15T11:53:55.546Z"}
+{"level":"info","message":"New client connected: 3gfkC2ju6o92lybtAAAN","timestamp":"2026-10-15T11:54:03.769Z"}
+{"level":"info","message":"New client connected: BBf39UipQ-4XhhcNAAAO","timestamp":"2026-10-15T11:54:09.054Z"}
+{"level":"info","message":"Client disconnected: 3gfkC2ju6o92lybtAAAN","timestamp":"2026-10-15T11:54:26.662Z"}
+{"level":"info","message":"New client connected: tkUpgq_-wup8jHFoAAAP","timestamp":"2026-10-15T11:54:26.911Z"}
+{"level":"info","message":"Client disconnected: tkUpgq_-wup8jHFoAAAP","timestamp":"2026-10-15T11:54:54.965Z"}
+{"level":"info","message":"New client connected: OCMVqCmbtY_Y0wGEAAAQ","timestamp":"2026-10-15T11:54:55.466Z"}
+{"level":"info","message":"Client disconnected: OCMVqCmbtY_Y0wGEAAAQ","timestamp":"2026-10-15T11:55:19.896Z"}
+{"level":"info","message":"New client connected: FrkOLVfZMdlHEBeOAAAR","timestamp":"2026-10-15T11:55:20.529Z"}
+{"level":"info","message":"Client disconnected: FrkOLVfZMdlHEBeOAAAR","timestamp":"2026-10-15T11:55:32.884Z"}
+{"level":"info","message":"New client connected: l0DWfrwAtCP5HN1DAAAS","timestamp":"2026-10-15T11:55:33.533Z"}
+{"level":"info","message":"New client connected: lfzmOhWEAzqcBgwNAAAT","timestamp":"2026-10-15T11:56:18.955Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T11:56:57.850Z"}
+{"level":"info","message":"New client connected: rid-n6dayxKdGfvyAAAA","timestamp":"2026-10-15T11:56:58.049Z"}
+{"level":"info","message":"New client connected: X9LuegzwU6wykOm0AAAB","timestamp":"2026-10-15T11:56:58.061Z"}
+{"level":"info","message":"New client connected: IAZuQ_cbUpBlQ7JOAAAC","timestamp":"2026-10-15T11:56:58.304Z"}
+{"level":"info","message":"New client connected: mve5ErS5sm0R_LybAAAD","timestamp":"2026-10-15T11:56:58.963Z"}
+{"level":"info","message":"New client connected: A4rez2BMsYN3hh5cAAAE","timestamp":"2026-10-15T11:56:59.123Z"}
+{"level":"info","message":"New client connected: uBDnTJQfP4e4mdr5AAAF","timestamp":"2026-10-15T11:56:59.441Z"}
+{"level":"info","message":"Client disconnected: rid-n6dayxKdGfvyAAAA","timestamp":"2026-10-15T11:57:50.892Z"}
+{"level":"info","message":"Client disconnected: X9LuegzwU6wykOm0AAAB","timestamp":"2026-10-15T11:57:50.903Z"}
+{"level":"info","message":"Client disconnected: IAZuQ_cbUpBlQ7JOAAAC","timestamp":"2026-10-15T11:57:50.969Z"}
+{"level":"info","message":"Client disconnected: A4rez2BMsYN3hh5cAAAE","timestamp":"2026-10-15T11:57:59.623Z"}
+{"level":"info","message":"Client disconnected: uBDnTJQfP4e4mdr5AAAF","timestamp":"2026-10-15T11:57:59.624Z"}
+{"level":"info","message":"Client disconnected: mve5ErS5sm0R_LybAAAD","timestamp":"2026-10-15T11:57:59.625Z"}
+{"level":"info","message":"New client connected: UvKOMxLUmN_VDNWUAAAG","timestamp":"2026-10-15T11:58:05.509Z"}
+{"level":"info","message":"New client connected: S3AxLLPHGTBJEW0cAAAH","timestamp":"2026-10-15T11:58:05.610Z"}
+{"level":"info","message":"New client connected: BhLMoSm3p67NA5JPAAAI","timestamp":"2026-10-15T11:58:05.767Z"}
+{"level":"info","message":"New client connected: RoK-1KHqXhzn7sXKAAAJ","timestamp":"2026-10-15T11:58:11.794Z"}
+{"level":"info","message":"Client disconnected: RoK-1KHqXhzn7sXKAAAJ","timestamp":"2026-10-15T11:58:11.856Z"}
+{"level":"info","message":"New client connected: WIp_TU-gkZNyeiVPAAAK","timestamp":"2026-10-15T11:58:12.041Z"}
+{"level":"info","message":"New client connected: IcK0XsicMIweq3xMAAAL","timestamp":"2026-10-15T11:58:48.357Z"}
+{"level":"info","message":"New client connected: 3BqW8S4FNDat3djhAAAM","timestamp":"2026-10-15T11:58:49.018Z"}
+{"level":"info","message":"Client disconnected: WIp_TU-gkZNyeiVPAAAK","timestamp":"2026-10-15T12:00:33.165Z"}
+{"level":"info","message":"New client connected: h48nS_aILJmmOzoDAAAN","timestamp":"2026-10-15T12:00:33.381Z"}
+{"level":"info","message":"Client disconnected: UvKOMxLUmN_VDNWUAAAG","timestamp":"2026-10-15T12:00:38.727Z"}
+{"level":"info","message":"New client connected: O3jfhZ1B5XXl279PAAAO","timestamp":"2026-10-15T12:00:39.814Z"}
+{"level":"info","message":"Client disconnected: BhLMoSm3p67NA5JPAAAI","timestamp":"2026-10-15T12:04:24.064Z"}
+{"level":"info","message":"New client connected: jCBv2M7wl_V6a6-1AAAP","timestamp":"2026-10-15T12:04:24.105Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T12:05:55.039Z"}
+{"level":"info","message":"New client connected: 9srnq0CvPzDDWfLgAAAA","timestamp":"2026-10-15T12:05:55.325Z"}
+{"level":"info","message":"New client connected: 3eSRylitObyyt_oTAAAB","timestamp":"2026-10-15T12:05:55.416Z"}
+{"level":"info","message":"New client connected: k9_-y3FJvnAVgHZ6AAAC","timestamp":"2026-10-15T12:05:55.536Z"}
+{"level":"info","message":"New client connected: 72sPFMNoiJ0LrWA9AAAD","timestamp":"2026-10-15T12:05:56.284Z"}
+{"level":"info","message":"New client connected: NdCXPHQMqfBmFSfeAAAE","timestamp":"2026-10-15T12:05:56.349Z"}
+{"level":"info","message":"New client connected: ub3S7mY7GRaTFrDTAAAF","timestamp":"2026-10-15T12:05:56.637Z"}
+{"level":"info","message":"Client disconnected: 72sPFMNoiJ0LrWA9AAAD","timestamp":"2026-10-15T12:09:09.841Z"}
+{"level":"info","message":"New client connected: M9DUtAlGi1AzC273AAAG","timestamp":"2026-10-15T12:09:09.877Z"}
+{"level":"info","message":"Client disconnected: M9DUtAlGi1AzC273AAAG","timestamp":"2026-10-15T12:09:24.675Z"}
+{"level":"info","message":"New client connected: CKoGj9lskyq6CTkKAAAH","timestamp":"2026-10-15T12:09:24.706Z"}
+{"level":"info","message":"Client disconnected: CKoGj9lskyq6CTkKAAAH","timestamp":"2026-10-15T12:09:37.688Z"}
+{"level":"info","message":"New client connected: gL35PTB7mVtrLG3AAAAI","timestamp":"2026-10-15T12:09:37.720Z"}
+{"level":"info","message":"Client disconnected: gL35PTB7mVtrLG3AAAAI","timestamp":"2026-10-15T12:09:52.769Z"}
+{"level":"info","message":"New client connected: Xzs-zYvg8uNY7VkgAAAJ","timestamp":"2026-10-15T12:09:52.800Z"}
+{"level":"info","message":"Client disconnected: NdCXPHQMqfBmFSfeAAAE","timestamp":"2026-10-15T12:10:05.542Z"}
+{"level":"info","message":"New client connected: JNFcQWZLXqPv6KuhAAAK","timestamp":"2026-10-15T12:10:05.563Z"}
+{"level":"info","message":"Client disconnected: JNFcQWZLXqPv6KuhAAAK","timestamp":"2026-10-15T12:10:24.611Z"}
+{"level":"info","message":"New client connected: MihS0dyKRJl8ZxlWAAAL","timestamp":"2026-10-15T12:10:24.630Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T12:10:59.742Z"}
+{"level":"info","message":"New client connected: vT1z8hIPKGfpj2ukAAAA","timestamp":"2026-10-15T12:11:00.143Z"}
+{"level":"info","message":"New client connected: SlExrYQCx9iUm2QnAAAB","timestamp":"2026-10-15T12:11:00.153Z"}
+{"level":"info","message":"New client connected: _YoWFaj49lt8xnzIAAAC","timestamp":"2026-10-15T12:11:00.748Z"}
+{"level":"info","message":"New client connected: vduHfdFq1S4g8yThAAAD","timestamp":"2026-10-15T12:11:00.868Z"}
+{"level":"info","message":"New client connected: Xbx3Cod_GXwN20-iAAAE","timestamp":"2026-10-15T12:11:01.445Z"}
+{"level":"info","message":"New client connected: ZS751yAqkEGTtuGZAAAF","timestamp":"2026-10-15T12:11:03.318Z"}
+{"level":"info","message":"Client disconnected: _YoWFaj49lt8xnzIAAAC","timestamp":"2026-10-15T12:11:17.590Z"}
+{"level":"info","message":"New client connected: xZIBqsad-Z-oWnxRAAAG","timestamp":"2026-10-15T12:11:17.621Z"}
+{"level":"info","message":"Client disconnected: xZIBqsad-Z-oWnxRAAAG","timestamp":"2026-10-15T12:15:42.962Z"}
+{"level":"info","message":"Client disconnected: vduHfdFq1S4g8yThAAAD","timestamp":"2026-10-15T12:15:42.967Z"}
+{"level":"info","message":"Client disconnected: Xbx3Cod_GXwN20-iAAAE","timestamp":"2026-10-15T12:15:42.967Z"}
+{"level":"info","message":"New client connected: _bjzQt9hkWIYXqlIAAAH","timestamp":"2026-10-15T12:15:47.036Z"}
+{"level":"info","message":"New client connected: _ycbj9MeNo_2KP2RAAAI","timestamp":"2026-10-15T12:16:01.970Z"}
+{"level":"info","message":"Client disconnected: _bjzQt9hkWIYXqlIAAAH","timestamp":"2026-10-15T12:16:10.829Z"}
+{"level":"info","message":"New client connected: gCzAXImJp0UeTmhmAAAJ","timestamp":"2026-10-15T12:16:14.496Z"}
+{"level":"info","message":"Client disconnected: _ycbj9MeNo_2KP2RAAAI","timestamp":"2026-10-15T12:16:35.434Z"}
+{"level":"info","message":"New client connected: AEbGcOujVOBbajTqAAAK","timestamp":"2026-10-15T12:16:35.501Z"}
+{"level":"info","message":"Client disconnected: AEbGcOujVOBbajTqAAAK","timestamp":"2026-10-15T12:16:53.843Z"}
+{"level":"info","message":"New client connected: ybSK0ztBIDQiJ6ikAAAL","timestamp":"2026-10-15T12:16:53.883Z"}
+{"level":"info","message":"Client disconnected: ybSK0ztBIDQiJ6ikAAAL","timestamp":"2026-10-15T12:17:10.074Z"}
+{"level":"info","message":"New client connected: Y4lp9rjuvPUQMD9VAAAM","timestamp":"2026-10-15T12:17:10.462Z"}
+{"level":"info","message":"New client connected: WDTFfoOyxJUL9WkjAAAN","timestamp":"2026-10-15T12:17:15.087Z"}
+{"level":"info","message":"New client connected: pq8y95XoyGWpbCawAAAO","timestamp":"2026-10-15T12:17:24.553Z"}
+{"level":"info","message":"Client disconnected: Y4lp9rjuvPUQMD9VAAAM","timestamp":"2026-10-15T12:17:39.918Z"}
+{"level":"info","message":"New client connected: bXALU6YV6aqm2-F0AAAP","timestamp":"2026-10-15T12:17:40.083Z"}
+{"level":"info","message":"Client disconnected: gCzAXImJp0UeTmhmAAAJ","timestamp":"2026-10-15T12:18:40.411Z"}
+{"level":"info","message":"Client disconnected: pq8y95XoyGWpbCawAAAO","timestamp":"2026-10-15T12:18:40.412Z"}
+{"level":"info","message":"Client disconnected: WDTFfoOyxJUL9WkjAAAN","timestamp":"2026-10-15T12:18:40.412Z"}
+{"level":"info","message":"New client connected: NHOkLidgDwG5319BAAAQ","timestamp":"2026-10-15T12:18:42.664Z"}
+{"level":"info","message":"New client connected: A-h4vABZ08crkRctAAAR","timestamp":"2026-10-15T12:18:47.720Z"}
+{"level":"info","message":"Client disconnected: NHOkLidgDwG5319BAAAQ","timestamp":"2026-10-15T12:19:04.942Z"}
+{"level":"info","message":"Client disconnected: A-h4vABZ08crkRctAAAR","timestamp":"2026-10-15T12:19:04.943Z"}
+{"level":"info","message":"New client connected: 02D_nGJnZKk4N75aAAAS","timestamp":"2026-10-15T12:19:09.007Z"}
+{"level":"info","message":"Client disconnected: ZS751yAqkEGTtuGZAAAF","timestamp":"2026-10-15T12:19:10.525Z"}
+{"level":"info","message":"Client disconnected: vT1z8hIPKGfpj2ukAAAA","timestamp":"2026-10-15T12:19:10.527Z"}
+{"level":"info","message":"Client disconnected: SlExrYQCx9iUm2QnAAAB","timestamp":"2026-10-15T12:19:10.530Z"}
+{"level":"info","message":"Client disconnected: bXALU6YV6aqm2-F0AAAP","timestamp":"2026-10-15T12:19:10.532Z"}
+{"level":"info","message":"New client connected: c4A5q1sPX66j_5RfAAAT","timestamp":"2026-10-15T12:19:17.077Z"}
+{"level":"info","message":"New client connected: 626cN1zjKUdXSMosAAAU","timestamp":"2026-10-15T12:19:17.103Z"}
+{"level":"info","message":"Client disconnected: 02D_nGJnZKk4N75aAAAS","timestamp":"2026-10-15T12:20:21.123Z"}
+{"level":"info","message":"New client connected: tF55xY4IAPP8d2lqAAAV","timestamp":"2026-10-15T12:20:26.181Z"}
+{"level":"info","message":"Client disconnected: tF55xY4IAPP8d2lqAAAV","timestamp":"2026-10-15T12:20:55.486Z"}
+{"level":"info","message":"New client connected: EBe6mVo4nFA6GbO2AAAW","timestamp":"2026-10-15T12:20:55.531Z"}
+{"level":"info","message":"New client connected: sxRygbT_f7_2KRqrAAAX","timestamp":"2026-10-15T12:21:41.211Z"}
+{"level":"info","message":"New client connected: vnVV-s0qIbPrwQ5XAAAY","timestamp":"2026-10-15T12:21:41.978Z"}
+{"level":"info","message":"New client connected: VQZ7hyLEYBCKuo58AAAZ","timestamp":"2026-10-15T12:21:59.730Z"}
+{"level":"info","message":"Client disconnected: EBe6mVo4nFA6GbO2AAAW","timestamp":"2026-10-15T12:22:08.850Z"}
+{"level":"info","message":"Client disconnected: vnVV-s0qIbPrwQ5XAAAY","timestamp":"2026-10-15T12:22:08.850Z"}
+{"level":"info","message":"Client disconnected: sxRygbT_f7_2KRqrAAAX","timestamp":"2026-10-15T12:22:08.850Z"}
+{"level":"info","message":"Client disconnected: 626cN1zjKUdXSMosAAAU","timestamp":"2026-10-15T12:27:01.230Z"}
+{"level":"info","message":"Client disconnected: c4A5q1sPX66j_5RfAAAT","timestamp":"2026-10-15T12:27:01.253Z"}
+{"level":"info","message":"Client disconnected: VQZ7hyLEYBCKuo58AAAZ","timestamp":"2026-10-15T12:27:01.280Z"}
+{"level":"info","message":"New client connected: 6lr6ySQvTSfPrwCrAAAa","timestamp":"2026-10-15T12:27:07.899Z"}
+{"level":"info","message":"New client connected: -C4o2LvCN4FWy1MrAAAb","timestamp":"2026-10-15T12:27:07.918Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-15T12:28:23.338Z"}
+{"level":"info","message":"New client connected: PBZpODzvncABdqMyAAAA","timestamp":"2026-10-15T12:28:23.514Z"}
+{"level":"info","message":"New client connected: Kf3Y3nhYo1oplj4IAAAB","timestamp":"2026-10-15T12:28:23.522Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <0e217dba-2fac-661e-7766-25d978317ca7@gmail.com>)","timestamp":"2026-10-15T12:34:58.387Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <8673d7d4-5394-c00b-9f67-705ad244c727@gmail.com>)","timestamp":"2026-10-15T12:35:56.861Z"}
+{"level":"info","message":"New client connected: 9A7cyPQ_LSRTYz_xAAAC","timestamp":"2026-10-15T12:37:31.095Z"}
+{"level":"info","message":"Client disconnected: 9A7cyPQ_LSRTYz_xAAAC","timestamp":"2026-10-15T12:37:31.219Z"}
+{"level":"info","message":"New client connected: II0QvHJnuBmjrkM9AAAD","timestamp":"2026-10-15T12:37:31.590Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <6991705c-56c0-e5fc-93b3-47579126351c@gmail.com>)","timestamp":"2026-10-15T12:37:55.168Z"}
+{"level":"info","message":"New client connected: I4y-D10NlCkKriAqAAAE","timestamp":"2026-10-15T12:38:02.217Z"}
+{"level":"info","message":"Client disconnected: II0QvHJnuBmjrkM9AAAD","timestamp":"2026-10-15T12:38:27.050Z"}
+{"level":"info","message":"New client connected: thTo7S2aEo3RALTtAAAF","timestamp":"2026-10-15T12:38:27.148Z"}
+{"level":"info","message":"Client disconnected: thTo7S2aEo3RALTtAAAF","timestamp":"2026-10-15T12:38:27.307Z"}
+{"level":"info","message":"New client connected: PbhYCyS56n1_n-a-AAAG","timestamp":"2026-10-15T12:38:27.522Z"}
+{"level":"info","message":"Client disconnected: I4y-D10NlCkKriAqAAAE","timestamp":"2026-10-15T12:38:39.966Z"}
+{"level":"info","message":"New client connected: QNhQn6wV6ja7K-EDAAAH","timestamp":"2026-10-15T12:40:12.800Z"}
+{"level":"info","message":"New client connected: OcumX0x3vWzCeNoxAAAI","timestamp":"2026-10-15T12:40:30.519Z"}
+{"level":"info","message":"New client connected: cq9K3JL3Y7-69Qo-AAAJ","timestamp":"2026-10-15T12:40:52.603Z"}
+{"level":"info","message":"Client disconnected: QNhQn6wV6ja7K-EDAAAH","timestamp":"2026-10-15T12:41:20.052Z"}
+{"level":"info","message":"Client disconnected: cq9K3JL3Y7-69Qo-AAAJ","timestamp":"2026-10-15T12:41:20.053Z"}
+{"level":"info","message":"New client connected: klfQn4sy33kJ04CyAAAK","timestamp":"2026-10-15T12:41:36.063Z"}
+{"level":"info","message":"New client connected: daSEUlATxbhm7VhnAAAL","timestamp":"2026-10-15T12:41:36.072Z"}
+{"level":"info","message":"Client disconnected: klfQn4sy33kJ04CyAAAK","timestamp":"2026-10-15T12:41:38.700Z"}
+{"level":"info","message":"Client disconnected: daSEUlATxbhm7VhnAAAL","timestamp":"2026-10-15T12:41:38.703Z"}
+{"level":"info","message":"New client connected: cveQiVFxEElviwZIAAAM","timestamp":"2026-10-15T12:41:42.471Z"}
+{"level":"info","message":"Employee registration OTP dispatched to smarttvas2354@gmail.com","timestamp":"2026-10-15T12:45:13.803Z"}
+{"level":"info","message":"Client disconnected: cveQiVFxEElviwZIAAAM","timestamp":"2026-10-15T12:48:58.829Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:20:55.923Z"}
+{"level":"info","message":"New client connected: OANxaJ279W4BPEQvAAAA","timestamp":"2026-10-19T04:23:50.994Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Staff orders retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:443:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:30:5\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)","timestamp":"2026-10-19T04:23:51.003Z"}
+{"level":"info","message":"New client connected: 2ooGO00trSKjiEm1AAAB","timestamp":"2026-10-19T04:23:57.238Z"}
+{"level":"info","message":"New client connected: 3iyqo9fJWO7Sz0fmAAAC","timestamp":"2026-10-19T04:23:57.403Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:23:58.464Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:23:58.484Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Menu categories retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/menu.js:23:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:23:58.817Z"}
+{"level":"info","message":"Client disconnected: OANxaJ279W4BPEQvAAAA","timestamp":"2026-10-19T04:23:58.967Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Tables retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/tables.js:14:29\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:23:59.337Z"}
+{"level":"info","message":"New client connected: B893WPowO9Wp-s9oAAAD","timestamp":"2026-10-19T04:24:02.482Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Staff orders retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:443:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:30:5\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)","timestamp":"2026-10-19T04:24:02.514Z"}
+{"level":"info","message":"Client disconnected: B893WPowO9Wp-s9oAAAD","timestamp":"2026-10-19T04:24:19.692Z"}
+{"level":"info","message":"New client connected: hiyQ_frVr8UMmOtcAAAE","timestamp":"2026-10-19T04:24:23.118Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Staff orders retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:443:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:30:5\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)","timestamp":"2026-10-19T04:24:23.151Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:26:16.061Z"}
+{"level":"info","message":"New client connected: RQbvoibrCCznumtXAAAA","timestamp":"2026-10-19T04:27:27.925Z"}
+{"level":"info","message":"Client disconnected: RQbvoibrCCznumtXAAAA","timestamp":"2026-10-19T04:27:29.180Z"}
+{"level":"info","message":"New client connected: 0M5JoVGKNPbiX8LMAAAB","timestamp":"2026-10-19T04:27:34.271Z"}
+{"level":"info","message":"New client connected: BNDAV_WuqaSJnLHZAAAC","timestamp":"2026-10-19T04:27:34.287Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:27:34.388Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:27:34.390Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Menu categories retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/menu.js:23:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:27:34.487Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Tables retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/tables.js:14:29\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:27:34.609Z"}
+{"level":"info","message":"Client disconnected: 0M5JoVGKNPbiX8LMAAAB","timestamp":"2026-10-19T04:30:15.597Z"}
+{"level":"info","message":"Client disconnected: BNDAV_WuqaSJnLHZAAAC","timestamp":"2026-10-19T04:30:15.599Z"}
+{"level":"info","message":"New client connected: l5eyMvrc1WOWhNktAAAD","timestamp":"2026-10-19T04:30:20.775Z"}
+{"level":"info","message":"New client connected: iKCWnegylZ-yfl1GAAAE","timestamp":"2026-10-19T04:30:20.797Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:30:20.883Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Orders listing error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T04:30:20.891Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Menu categories retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/menu.js:23:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:30:21.039Z"}
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"Tables retrieval error: Access denied for user 'root'@'localhost' (using password: NO)","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: NO)\n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/tables.js:14:29\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at router.handle (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:47:12)","timestamp":"2026-10-19T04:30:21.188Z"}
+{"level":"info","message":"Client disconnected: iKCWnegylZ-yfl1GAAAE","timestamp":"2026-10-19T04:31:29.853Z"}
+{"level":"info","message":"Client disconnected: l5eyMvrc1WOWhNktAAAD","timestamp":"2026-10-19T04:31:29.872Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:31:49.916Z"}
+{"level":"info","message":"New client connected: VovKP9MAHArPiIDdAAAA","timestamp":"2026-10-19T04:32:11.291Z"}
+{"level":"info","message":"New client connected: 2Gvo30QvAKrmrlnLAAAB","timestamp":"2026-10-19T04:32:11.308Z"}
+{"level":"info","message":"Client disconnected: VovKP9MAHArPiIDdAAAA","timestamp":"2026-10-19T04:32:52.827Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:33:47.275Z"}
+{"level":"info","message":"New client connected: UgJRSqH5-R5WPl-FAAAA","timestamp":"2026-10-19T04:33:47.940Z"}
+{"level":"info","message":"OTP email dispatched to sahuas2040@gmail.com (Message ID: <45ffb56a-f881-9680-2cb2-a8f35bd1ea8d@gmail.com>)","timestamp":"2026-10-19T04:35:49.418Z"}
+{"level":"info","message":"Client disconnected: UgJRSqH5-R5WPl-FAAAA","timestamp":"2026-10-19T04:37:01.720Z"}
+{"level":"info","message":"New client connected: FbGxc40rjOWW-zzDAAAB","timestamp":"2026-10-19T04:37:35.872Z"}
+{"level":"info","message":"New client connected: -4rReaW-qG2EhELQAAAC","timestamp":"2026-10-19T04:38:44.640Z"}
+{"level":"info","message":"New client connected: VQYF52kX-zjXF0dQAAAD","timestamp":"2026-10-19T04:38:50.217Z"}
+{"level":"info","message":"New client connected: Xp-Tjk6SQjBujgIgAAAE","timestamp":"2026-10-19T04:38:57.056Z"}
+{"level":"info","message":"OTP email dispatched to smarttv2354as@gmail.com (Message ID: <db93b7df-2c88-1012-786a-4450e0ebd8a4@gmail.com>)","timestamp":"2026-10-19T04:40:36.477Z"}
+{"level":"info","message":"Welcome confirmation email dispatched to smarttv2354as@gmail.com","timestamp":"2026-10-19T04:41:20.148Z"}
+{"level":"info","message":"New client connected: 0pwFqFTReSN1s3GZAAAF","timestamp":"2026-10-19T04:41:22.811Z"}
+{"level":"info","message":"Client disconnected: 0pwFqFTReSN1s3GZAAAF","timestamp":"2026-10-19T04:41:22.933Z"}
+{"level":"info","message":"New client connected: uyAiduI0BsIO6QKJAAAG","timestamp":"2026-10-19T04:41:22.973Z"}
+{"level":"info","message":"Client disconnected: FbGxc40rjOWW-zzDAAAB","timestamp":"2026-10-19T04:41:50.067Z"}
+{"level":"info","message":"Client disconnected: uyAiduI0BsIO6QKJAAAG","timestamp":"2026-10-19T04:41:50.067Z"}
+{"level":"info","message":"New client connected: e8pU0jlhbEvg2i_YAAAH","timestamp":"2026-10-19T04:41:54.851Z"}
+{"level":"info","message":"New client connected: xWYWWH8-dzkYNr4uAAAI","timestamp":"2026-10-19T04:41:54.867Z"}
+{"level":"info","message":"Client disconnected: -4rReaW-qG2EhELQAAAC","timestamp":"2026-10-19T04:42:08.266Z"}
+{"level":"info","message":"New client connected: yrcdKJFoWNKYoJOeAAAJ","timestamp":"2026-10-19T04:42:08.336Z"}
+{"level":"info","message":"Client disconnected: Xp-Tjk6SQjBujgIgAAAE","timestamp":"2026-10-19T04:42:17.563Z"}
+{"level":"info","message":"New client connected: ke1ehXj2j1d64atmAAAK","timestamp":"2026-10-19T04:42:18.249Z"}
+{"level":"info","message":"Client disconnected: ke1ehXj2j1d64atmAAAK","timestamp":"2026-10-19T04:42:42.774Z"}
+{"level":"info","message":"New client connected: MepLuODo_0INu0vcAAAL","timestamp":"2026-10-19T04:42:43.427Z"}
+{"level":"info","message":"New client connected: JUFEcun7C7sLXvb7AAAM","timestamp":"2026-10-19T04:43:08.243Z"}
+{"level":"info","message":"Client disconnected: JUFEcun7C7sLXvb7AAAM","timestamp":"2026-10-19T04:43:08.334Z"}
+{"level":"info","message":"New client connected: zcoeloAxzvlVrVcGAAAN","timestamp":"2026-10-19T04:43:15.489Z"}
+{"level":"info","message":"Client disconnected: yrcdKJFoWNKYoJOeAAAJ","timestamp":"2026-10-19T04:43:32.749Z"}
+{"level":"info","message":"Client disconnected: VQYF52kX-zjXF0dQAAAD","timestamp":"2026-10-19T04:43:32.759Z"}
+{"level":"info","message":"Client disconnected: MepLuODo_0INu0vcAAAL","timestamp":"2026-10-19T04:43:32.765Z"}
+{"level":"info","message":"New client connected: qFYTYDASQt9mosi8AAAO","timestamp":"2026-10-19T04:43:33.100Z"}
+{"level":"info","message":"New client connected: CedmtLOVNBUUXeqmAAAP","timestamp":"2026-10-19T04:43:35.532Z"}
+{"level":"info","message":"New client connected: qtxq3hqwvREnF_uRAAAQ","timestamp":"2026-10-19T04:43:44.876Z"}
+{"level":"info","message":"Client disconnected: xWYWWH8-dzkYNr4uAAAI","timestamp":"2026-10-19T04:43:51.675Z"}
+{"level":"info","message":"Client disconnected: e8pU0jlhbEvg2i_YAAAH","timestamp":"2026-10-19T04:43:51.681Z"}
+{"level":"info","message":"Client disconnected: zcoeloAxzvlVrVcGAAAN","timestamp":"2026-10-19T04:43:51.683Z"}
+{"level":"info","message":"New client connected: YulBE3YDVPNR-_tZAAAR","timestamp":"2026-10-19T04:43:52.725Z"}
+{"level":"info","message":"New client connected: CPJoHKxzjyJ4qYr1AAAS","timestamp":"2026-10-19T04:44:53.035Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:45:43.321Z"}
+{"level":"info","message":"New client connected: CjXxe0hNEMLHzdV1AAAA","timestamp":"2026-10-19T04:45:44.422Z"}
+{"level":"info","message":"New client connected: 1l1yGGYvVoJyL0TIAAAB","timestamp":"2026-10-19T04:45:44.425Z"}
+{"level":"info","message":"New client connected: 2ntoYwsVbPUIwyn1AAAC","timestamp":"2026-10-19T04:45:44.432Z"}
+{"level":"info","message":"New client connected: m9l8lBHFOWB2kKvRAAAD","timestamp":"2026-10-19T04:45:44.607Z"}
+{"level":"info","message":"New client connected: x0OX2SGYGj3u-R4RAAAE","timestamp":"2026-10-19T04:45:44.903Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T04:47:07.313Z"}
+{"level":"info","message":"New client connected: v1wC_TQFjlfUCUM_AAAA","timestamp":"2026-10-19T04:47:07.600Z"}
+{"level":"info","message":"New client connected: IYMbenJzHbCRZ4fcAAAB","timestamp":"2026-10-19T04:47:07.635Z"}
+{"level":"info","message":"New client connected: RqZZrIIJwAj6pHCTAAAC","timestamp":"2026-10-19T04:47:07.752Z"}
+{"level":"info","message":"New client connected: SncezHlBLkd9vZjAAAAD","timestamp":"2026-10-19T04:47:08.053Z"}
+{"level":"info","message":"New client connected: 0jWDnFOD25uSUP7oAAAE","timestamp":"2026-10-19T04:47:08.055Z"}
+{"level":"info","message":"New client connected: 9CHRmCXaMbMiGPJuAAAF","timestamp":"2026-10-19T04:48:37.474Z"}
+{"level":"info","message":"Client disconnected: 9CHRmCXaMbMiGPJuAAAF","timestamp":"2026-10-19T04:48:37.533Z"}
+{"level":"info","message":"New client connected: U7SGbgFbV9ZcB763AAAG","timestamp":"2026-10-19T04:48:37.574Z"}
+{"level":"info","message":"Client disconnected: SncezHlBLkd9vZjAAAAD","timestamp":"2026-10-19T04:48:45.055Z"}
+{"level":"info","message":"Client disconnected: 0jWDnFOD25uSUP7oAAAE","timestamp":"2026-10-19T04:48:45.056Z"}
+{"level":"info","message":"Client disconnected: U7SGbgFbV9ZcB763AAAG","timestamp":"2026-10-19T04:48:45.059Z"}
+{"level":"info","message":"New client connected: E8_bsjA4139msQf0AAAH","timestamp":"2026-10-19T04:48:45.220Z"}
+{"level":"info","message":"New client connected: EN4RcZmyT83P1nTsAAAI","timestamp":"2026-10-19T04:48:48.625Z"}
+{"level":"info","message":"New client connected: us-IvHqtoNi7ssYVAAAJ","timestamp":"2026-10-19T04:48:49.499Z"}
+{"level":"info","message":"Client disconnected: us-IvHqtoNi7ssYVAAAJ","timestamp":"2026-10-19T04:48:49.564Z"}
+{"level":"info","message":"New client connected: V2KZp1sCQUG4nYKgAAAK","timestamp":"2026-10-19T04:48:49.597Z"}
+{"level":"info","message":"Client disconnected: RqZZrIIJwAj6pHCTAAAC","timestamp":"2026-10-19T04:48:58.096Z"}
+{"level":"info","message":"Client disconnected: v1wC_TQFjlfUCUM_AAAA","timestamp":"2026-10-19T04:48:58.111Z"}
+{"level":"info","message":"Client disconnected: IYMbenJzHbCRZ4fcAAAB","timestamp":"2026-10-19T04:48:58.117Z"}
+{"level":"info","message":"New client connected: CvYSHQWDiRbpyijTAAAL","timestamp":"2026-10-19T04:48:58.716Z"}
+{"level":"info","message":"New client connected: mEeOluBf7_b_ZYJnAAAM","timestamp":"2026-10-19T04:52:07.438Z"}
+{"level":"info","message":"New client connected: q2qN7Gv334rPBISlAAAN","timestamp":"2026-10-19T04:52:10.079Z"}
+{"level":"info","message":"Client disconnected: EN4RcZmyT83P1nTsAAAI","timestamp":"2026-10-19T04:53:19.328Z"}
+{"level":"info","message":"Client disconnected: V2KZp1sCQUG4nYKgAAAK","timestamp":"2026-10-19T04:53:19.328Z"}
+{"level":"info","message":"New client connected: v6bxdKPqueiZ6KQIAAAO","timestamp":"2026-10-19T04:53:19.362Z"}
+{"level":"info","message":"New client connected: AAOWy5vyAH_xSH6vAAAP","timestamp":"2026-10-19T04:53:19.473Z"}
+{"level":"info","message":"Client disconnected: CvYSHQWDiRbpyijTAAAL","timestamp":"2026-10-19T05:04:27.976Z"}
+{"level":"info","message":"Client disconnected: q2qN7Gv334rPBISlAAAN","timestamp":"2026-10-19T05:04:27.976Z"}
+{"level":"info","message":"Client disconnected: mEeOluBf7_b_ZYJnAAAM","timestamp":"2026-10-19T05:04:27.977Z"}
+{"level":"info","message":"New client connected: WdAaaWZZqhXla3QSAAAQ","timestamp":"2026-10-19T05:04:28.303Z"}
+{"level":"info","message":"New client connected: ndz1PmHCmDN_S2kvAAAR","timestamp":"2026-10-19T05:04:28.340Z"}
+{"level":"info","message":"New client connected: wwl5iWHanfGSG_PmAAAS","timestamp":"2026-10-19T05:04:28.344Z"}
+{"level":"info","message":"Client disconnected: wwl5iWHanfGSG_PmAAAS","timestamp":"2026-10-19T05:04:41.436Z"}
+{"level":"info","message":"New client connected: 97W05tt8IRN3IORIAAAT","timestamp":"2026-10-19T05:04:41.990Z"}
+{"level":"info","message":"Client disconnected: 97W05tt8IRN3IORIAAAT","timestamp":"2026-10-19T05:04:57.444Z"}
+{"level":"info","message":"New client connected: t1bPVl2UOyY7YOWhAAAU","timestamp":"2026-10-19T05:04:57.879Z"}
+{"level":"info","message":"Client disconnected: ndz1PmHCmDN_S2kvAAAR","timestamp":"2026-10-19T05:05:07.218Z"}
+{"level":"info","message":"New client connected: iNsOZ8rkOSn8QNoZAAAV","timestamp":"2026-10-19T05:05:07.817Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T05:05:52.468Z"}
+{"level":"info","message":"New client connected: mEED_AxVvLGkds8JAAAA","timestamp":"2026-10-19T05:05:52.668Z"}
+{"level":"info","message":"New client connected: HjRRo1Hhh7RPTCKpAAAB","timestamp":"2026-10-19T05:05:52.978Z"}
+{"level":"info","message":"New client connected: _H6ZkRlAGVcz_UyPAAAC","timestamp":"2026-10-19T05:05:52.990Z"}
+{"level":"info","message":"New client connected: 84yA4dg9hFfKEOHeAAAD","timestamp":"2026-10-19T05:05:53.121Z"}
+{"level":"info","message":"New client connected: Ag40CnrVYhz6VrK5AAAE","timestamp":"2026-10-19T05:05:53.125Z"}
+{"level":"info","message":"New client connected: cvTEYyKCYivmSLMxAAAF","timestamp":"2026-10-19T05:05:54.464Z"}
+{"level":"info","message":"Client disconnected: cvTEYyKCYivmSLMxAAAF","timestamp":"2026-10-19T05:06:22.738Z"}
+{"level":"info","message":"New client connected: gFgv-5KE0wCOUtfaAAAG","timestamp":"2026-10-19T05:06:24.392Z"}
+{"level":"info","message":"Client disconnected: HjRRo1Hhh7RPTCKpAAAB","timestamp":"2026-10-19T05:07:39.189Z"}
+{"level":"info","message":"New client connected: LpC3HhS85psOXw9TAAAH","timestamp":"2026-10-19T05:07:39.209Z"}
+{"level":"info","message":"Client disconnected: LpC3HhS85psOXw9TAAAH","timestamp":"2026-10-19T05:08:03.028Z"}
+{"level":"info","message":"New client connected: aF1ZYFvv3yvtLS3OAAAI","timestamp":"2026-10-19T05:08:03.786Z"}
+{"level":"info","message":"Client disconnected: mEED_AxVvLGkds8JAAAA","timestamp":"2026-10-19T05:08:46.744Z"}
+{"level":"info","message":"New client connected: gHJSr2CO9OgJm72ZAAAJ","timestamp":"2026-10-19T05:08:47.678Z"}
+{"level":"info","message":"Client disconnected: gHJSr2CO9OgJm72ZAAAJ","timestamp":"2026-10-19T05:09:07.695Z"}
+{"level":"info","message":"New client connected: zKIxzNJgTGM6ef0eAAAK","timestamp":"2026-10-19T05:09:08.318Z"}
+{"level":"info","message":"Client disconnected: zKIxzNJgTGM6ef0eAAAK","timestamp":"2026-10-19T05:09:22.243Z"}
+{"level":"info","message":"New client connected: p0t7aGGu_ItN0FqbAAAL","timestamp":"2026-10-19T05:09:22.574Z"}
+{"level":"info","message":"Client disconnected: 84yA4dg9hFfKEOHeAAAD","timestamp":"2026-10-19T05:14:58.610Z"}
+{"level":"info","message":"New client connected: 98v2F8NJcDO0n2dhAAAM","timestamp":"2026-10-19T05:14:58.963Z"}
+{"level":"info","message":"Client disconnected: _H6ZkRlAGVcz_UyPAAAC","timestamp":"2026-10-19T05:15:24.020Z"}
+{"level":"info","message":"Client disconnected: aF1ZYFvv3yvtLS3OAAAI","timestamp":"2026-10-19T05:15:29.411Z"}
+{"level":"info","message":"Client disconnected: p0t7aGGu_ItN0FqbAAAL","timestamp":"2026-10-19T05:15:33.114Z"}
+{"level":"info","message":"Client disconnected: 98v2F8NJcDO0n2dhAAAM","timestamp":"2026-10-19T05:15:34.777Z"}
+{"level":"info","message":"New client connected: UNuCjWswRx0YvuHkAAAN","timestamp":"2026-10-19T05:15:34.850Z"}
+{"level":"info","message":"Client disconnected: gFgv-5KE0wCOUtfaAAAG","timestamp":"2026-10-19T05:16:01.153Z"}
+{"level":"info","message":"New client connected: ZsmZVfw42a9WgNGRAAAO","timestamp":"2026-10-19T05:16:01.254Z"}
+{"level":"info","message":"New client connected: FDv6aO7JcCUZvUbCAAAP","timestamp":"2026-10-19T05:17:10.013Z"}
+{"level":"info","message":"New client connected: B4h_tEdixg_8dJO7AAAQ","timestamp":"2026-10-19T05:17:13.167Z"}
+{"level":"info","message":"New client connected: PwJJc-pyPvfAu841AAAR","timestamp":"2026-10-19T05:17:16.520Z"}
+{"level":"info","message":"Client disconnected: B4h_tEdixg_8dJO7AAAQ","timestamp":"2026-10-19T05:20:07.665Z"}
+{"level":"info","message":"Client disconnected: PwJJc-pyPvfAu841AAAR","timestamp":"2026-10-19T05:20:07.667Z"}
+{"level":"info","message":"Client disconnected: FDv6aO7JcCUZvUbCAAAP","timestamp":"2026-10-19T05:20:07.667Z"}
+{"level":"info","message":"New client connected: 4wchXM2A0SvCHpp3AAAS","timestamp":"2026-10-19T05:20:36.698Z"}
+{"level":"info","message":"New client connected: HbpGtrL-n_2x23yVAAAT","timestamp":"2026-10-19T05:20:41.640Z"}
+{"level":"info","message":"New client connected: 1fhWTzVzJhnYCOvxAAAU","timestamp":"2026-10-19T05:20:54.701Z"}
+{"level":"info","message":"New client connected: xMQ6aJkSH7a8MUm1AAAV","timestamp":"2026-10-19T05:28:35.771Z"}
+{"level":"info","message":"Client disconnected: xMQ6aJkSH7a8MUm1AAAV","timestamp":"2026-10-19T05:28:39.074Z"}
+{"level":"info","message":"New client connected: bPhkIFdZSqOCmmRPAAAW","timestamp":"2026-10-19T05:28:39.111Z"}
+{"level":"info","message":"Client disconnected: bPhkIFdZSqOCmmRPAAAW","timestamp":"2026-10-19T05:28:49.446Z"}
+{"level":"info","message":"New client connected: E1uH6XZg23OBVraZAAAX","timestamp":"2026-10-19T05:28:49.485Z"}
+{"level":"info","message":"Client disconnected: E1uH6XZg23OBVraZAAAX","timestamp":"2026-10-19T05:28:58.269Z"}
+{"level":"info","message":"New client connected: HznSdW4UKHxvbvO5AAAY","timestamp":"2026-10-19T05:28:58.287Z"}
+{"level":"info","message":"Client disconnected: HznSdW4UKHxvbvO5AAAY","timestamp":"2026-10-19T05:29:37.308Z"}
+{"level":"info","message":"New client connected: HmlLyZh-vJxt6I_2AAAZ","timestamp":"2026-10-19T05:29:37.328Z"}
+{"level":"info","message":"New client connected: 8GP7tjGINc1yrFhIAAAa","timestamp":"2026-10-19T05:29:45.805Z"}
+{"level":"info","message":"Client disconnected: 8GP7tjGINc1yrFhIAAAa","timestamp":"2026-10-19T05:30:12.249Z"}
+{"level":"info","message":"New client connected: 8jY-oyiD7j3zw-TwAAAb","timestamp":"2026-10-19T05:30:12.345Z"}
+{"level":"info","message":"Client disconnected: 8jY-oyiD7j3zw-TwAAAb","timestamp":"2026-10-19T05:30:28.588Z"}
+{"level":"info","message":"New client connected: ql5A82Xiq3grL1jHAAAc","timestamp":"2026-10-19T05:30:28.622Z"}
+{"level":"info","message":"Client disconnected: HmlLyZh-vJxt6I_2AAAZ","timestamp":"2026-10-19T05:31:29.137Z"}
+{"level":"info","message":"New client connected: 6G1JWPsTEbTBuCvMAAAd","timestamp":"2026-10-19T05:31:29.443Z"}
+{"level":"info","message":"Client disconnected: 6G1JWPsTEbTBuCvMAAAd","timestamp":"2026-10-19T05:31:43.252Z"}
+{"level":"info","message":"New client connected: WR1vguFK_k-Fb8XQAAAe","timestamp":"2026-10-19T05:31:43.272Z"}
+{"level":"info","message":"Client disconnected: ZsmZVfw42a9WgNGRAAAO","timestamp":"2026-10-19T05:32:08.478Z"}
+{"level":"info","message":"Client disconnected: UNuCjWswRx0YvuHkAAAN","timestamp":"2026-10-19T05:32:08.480Z"}
+{"level":"info","message":"Client disconnected: ql5A82Xiq3grL1jHAAAc","timestamp":"2026-10-19T05:32:08.483Z"}
+{"level":"info","message":"Client disconnected: WR1vguFK_k-Fb8XQAAAe","timestamp":"2026-10-19T05:32:08.487Z"}
+{"level":"info","message":"New client connected: gN9BLasSsbHHMlw5AAAf","timestamp":"2026-10-19T05:32:08.717Z"}
+{"level":"info","message":"New client connected: E1--N_2wj2HyNrEYAAAg","timestamp":"2026-10-19T05:32:39.036Z"}
+{"level":"info","message":"New client connected: NwCvjHM4zKjaY2SgAAAh","timestamp":"2026-10-19T05:32:45.943Z"}
+{"level":"info","message":"New client connected: 9CYw6qWNeOkajBFXAAAi","timestamp":"2026-10-19T05:34:12.080Z"}
+{"level":"info","message":"Client disconnected: gN9BLasSsbHHMlw5AAAf","timestamp":"2026-10-19T05:34:12.945Z"}
+{"level":"info","message":"New client connected: If9tOGpajKkGFtY_AAAj","timestamp":"2026-10-19T05:34:13.046Z"}
+{"level":"info","message":"New client connected: C5SBraDZg6yef4inAAAk","timestamp":"2026-10-19T05:34:15.257Z"}
+{"level":"info","message":"Client disconnected: C5SBraDZg6yef4inAAAk","timestamp":"2026-10-19T05:34:15.320Z"}
+{"level":"info","message":"New client connected: icqou35x0pzj8ygOAAAl","timestamp":"2026-10-19T05:34:15.354Z"}
+{"level":"info","message":"Client disconnected: If9tOGpajKkGFtY_AAAj","timestamp":"2026-10-19T05:35:48.385Z"}
+{"level":"info","message":"New client connected: 2YWT6namA3XPc-0NAAAm","timestamp":"2026-10-19T05:35:48.401Z"}
+{"level":"info","message":"Client disconnected: 2YWT6namA3XPc-0NAAAm","timestamp":"2026-10-19T05:35:55.093Z"}
+{"level":"info","message":"New client connected: lujQRi-3dJtTigz0AAAn","timestamp":"2026-10-19T05:35:55.107Z"}
+{"level":"info","message":"Client disconnected: NwCvjHM4zKjaY2SgAAAh","timestamp":"2026-10-19T05:36:49.905Z"}
+{"level":"info","message":"New client connected: YQ0SPwwwkoRts820AAAo","timestamp":"2026-10-19T05:36:49.945Z"}
+{"level":"info","message":"Client disconnected: 9CYw6qWNeOkajBFXAAAi","timestamp":"2026-10-19T05:37:15.642Z"}
+{"level":"info","message":"Client disconnected: E1--N_2wj2HyNrEYAAAg","timestamp":"2026-10-19T05:37:15.643Z"}
+{"level":"info","message":"Client disconnected: YQ0SPwwwkoRts820AAAo","timestamp":"2026-10-19T05:37:15.643Z"}
+{"level":"info","message":"Client disconnected: lujQRi-3dJtTigz0AAAn","timestamp":"2026-10-19T05:37:15.644Z"}
+{"level":"info","message":"New client connected: mA7kZtK-KbfeQpx6AAAp","timestamp":"2026-10-19T05:37:17.231Z"}
+{"level":"info","message":"New client connected: ewd1rOIamfam6UyDAAAq","timestamp":"2026-10-19T05:37:17.233Z"}
+{"level":"info","message":"New client connected: BX9dO0Bj3Lo8qSIaAAAr","timestamp":"2026-10-19T05:37:17.434Z"}
+{"level":"info","message":"New client connected: 5Ey_BQ0FWVSkYohfAAAs","timestamp":"2026-10-19T05:37:17.437Z"}
+{"level":"info","message":"Client disconnected: ewd1rOIamfam6UyDAAAq","timestamp":"2026-10-19T05:37:33.116Z"}
+{"level":"info","message":"New client connected: NgRBxMbpKZjX3bd1AAAt","timestamp":"2026-10-19T05:37:33.155Z"}
+{"level":"info","message":"Client disconnected: NgRBxMbpKZjX3bd1AAAt","timestamp":"2026-10-19T05:37:55.195Z"}
+{"level":"info","message":"New client connected: OQhn23hLnOuJO60mAAAu","timestamp":"2026-10-19T05:37:55.209Z"}
+{"level":"info","message":"Client disconnected: Ag40CnrVYhz6VrK5AAAE","timestamp":"2026-10-19T05:38:12.999Z"}
+{"level":"info","message":"Client disconnected: mA7kZtK-KbfeQpx6AAAp","timestamp":"2026-10-19T05:38:12.999Z"}
+{"level":"info","message":"Client disconnected: icqou35x0pzj8ygOAAAl","timestamp":"2026-10-19T05:38:13.002Z"}
+{"level":"info","message":"Client disconnected: 5Ey_BQ0FWVSkYohfAAAs","timestamp":"2026-10-19T05:38:13.005Z"}
+{"level":"info","message":"Client disconnected: OQhn23hLnOuJO60mAAAu","timestamp":"2026-10-19T05:38:13.009Z"}
+{"level":"info","message":"Client disconnected: BX9dO0Bj3Lo8qSIaAAAr","timestamp":"2026-10-19T05:38:13.010Z"}
+{"level":"info","message":"New client connected: 7DGeMDNq-cKQK4o_AAAv","timestamp":"2026-10-19T05:38:39.299Z"}
+{"level":"info","message":"New client connected: Op-MxjhKSmX8bsgwAAAw","timestamp":"2026-10-19T05:38:39.303Z"}
+{"level":"info","message":"New client connected: gxTD_o4fY067w2i6AAAx","timestamp":"2026-10-19T05:38:39.309Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T05:40:27.303Z"}
+{"level":"info","message":"New client connected: Prf2sYbOHLqYLKX7AAAA","timestamp":"2026-10-19T05:40:27.720Z"}
+{"level":"info","message":"New client connected: 8GdattcKQbmkzWBZAAAB","timestamp":"2026-10-19T05:40:27.927Z"}
+{"level":"info","message":"New client connected: 5j-Xy0YlhaQ_jMp2AAAC","timestamp":"2026-10-19T05:40:28.128Z"}
+{"level":"info","message":"New client connected: D14v-Y2UHk4ZSidoAAAD","timestamp":"2026-10-19T05:40:28.137Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T05:40:30.527Z"}
+{"level":"info","message":"New client connected: -VYFjHbzkXnRodDJAAAA","timestamp":"2026-10-19T05:40:30.695Z"}
+{"level":"info","message":"New client connected: SA68FD4e0g7ar-31AAAB","timestamp":"2026-10-19T05:40:30.841Z"}
+{"level":"info","message":"New client connected: bFstgvXzdJsUwkKKAAAC","timestamp":"2026-10-19T05:40:30.863Z"}
+{"level":"info","message":"New client connected: B6XrH7w-qwBlEIXjAAAD","timestamp":"2026-10-19T05:40:31.391Z"}
+{"level":"info","message":"New client connected: IUf0ZbXy9skx_B59AAAE","timestamp":"2026-10-19T05:40:31.651Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T05:40:40.255Z"}
+{"level":"info","message":"New client connected: r-2OHoYnX22lczb2AAAA","timestamp":"2026-10-19T05:40:40.517Z"}
+{"level":"info","message":"New client connected: iWH73SYB6bmkDj9kAAAB","timestamp":"2026-10-19T05:40:40.724Z"}
+{"level":"info","message":"New client connected: 7-ByFPhN-_zs82STAAAC","timestamp":"2026-10-19T05:40:40.795Z"}
+{"level":"info","message":"New client connected: kFNed2DBaXbcNINUAAAD","timestamp":"2026-10-19T05:40:41.810Z"}
+{"level":"info","message":"New client connected: OfYYp1de1kNTa_cfAAAE","timestamp":"2026-10-19T05:40:42.531Z"}
+{"level":"info","message":"New client connected: VLKI7Po_KVJPGmEhAAAF","timestamp":"2026-10-19T05:40:45.134Z"}
+{"level":"info","message":"Client disconnected: VLKI7Po_KVJPGmEhAAAF","timestamp":"2026-10-19T05:43:01.510Z"}
+{"level":"info","message":"New client connected: hEalcvnmXIGMaTqaAAAG","timestamp":"2026-10-19T05:43:01.602Z"}
+{"level":"info","message":"New client connected: kxob8X2MowsrqEmpAAAH","timestamp":"2026-10-19T05:46:53.527Z"}
+{"level":"info","message":"Client disconnected: kxob8X2MowsrqEmpAAAH","timestamp":"2026-10-19T05:46:53.579Z"}
+{"level":"info","message":"New client connected: s2MbckVAvTEa-EqIAAAI","timestamp":"2026-10-19T05:46:53.604Z"}
+{"level":"info","message":"New client connected: eQF2pjuModeDsl53AAAJ","timestamp":"2026-10-19T05:47:29.008Z"}
+{"level":"info","message":"Client disconnected: hEalcvnmXIGMaTqaAAAG","timestamp":"2026-10-19T05:51:40.031Z"}
+{"level":"info","message":"Client disconnected: eQF2pjuModeDsl53AAAJ","timestamp":"2026-10-19T05:51:40.032Z"}
+{"level":"info","message":"Client disconnected: iWH73SYB6bmkDj9kAAAB","timestamp":"2026-10-19T05:51:40.032Z"}
+{"level":"info","message":"New client connected: 4f6VwaTtsMEBA85tAAAK","timestamp":"2026-10-19T05:51:40.062Z"}
+{"level":"info","message":"New client connected: H2fU23O44ciHhycFAAAL","timestamp":"2026-10-19T05:51:40.066Z"}
+{"level":"info","message":"New client connected: gNJ-6DzGUZ8kc2umAAAM","timestamp":"2026-10-19T05:51:40.069Z"}
+{"level":"info","message":"Client disconnected: OfYYp1de1kNTa_cfAAAE","timestamp":"2026-10-19T05:53:29.003Z"}
+{"level":"info","message":"New client connected: indOck2hIZ6uXUifAAAN","timestamp":"2026-10-19T05:53:29.558Z"}
+{"level":"info","message":"New client connected: m5XGZ0KjP3UArFXsAAAO","timestamp":"2026-10-19T05:53:32.053Z"}
+{"level":"info","message":"Client disconnected: indOck2hIZ6uXUifAAAN","timestamp":"2026-10-19T05:54:51.329Z"}
+{"level":"info","message":"New client connected: DftnXAhlBvgSwkBUAAAP","timestamp":"2026-10-19T05:54:51.874Z"}
+{"level":"info","message":"Client disconnected: DftnXAhlBvgSwkBUAAAP","timestamp":"2026-10-19T05:55:55.204Z"}
+{"level":"info","message":"New client connected: hZPw3bV8SPWVX599AAAQ","timestamp":"2026-10-19T05:55:55.855Z"}
+{"level":"info","message":"Client disconnected: hZPw3bV8SPWVX599AAAQ","timestamp":"2026-10-19T05:56:08.504Z"}
+{"level":"info","message":"New client connected: j2m83JtHF3cKiNZAAAAR","timestamp":"2026-10-19T05:56:09.323Z"}
+{"level":"info","message":"Client disconnected: j2m83JtHF3cKiNZAAAAR","timestamp":"2026-10-19T05:56:19.548Z"}
+{"level":"info","message":"New client connected: tcAgtT0OEZgYoYFvAAAS","timestamp":"2026-10-19T05:56:20.083Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T05:57:29.109Z"}
+{"level":"info","message":"New client connected: TgLcUJfhgye8hKqXAAAA","timestamp":"2026-10-19T05:57:29.597Z"}
+{"level":"info","message":"New client connected: RwpRvMWyz0rReHC3AAAB","timestamp":"2026-10-19T05:57:29.630Z"}
+{"level":"info","message":"New client connected: bZJxJE7maz8oKIFTAAAC","timestamp":"2026-10-19T05:57:29.804Z"}
+{"level":"info","message":"New client connected: y9Hs8nJwx2VThZY3AAAD","timestamp":"2026-10-19T05:57:30.054Z"}
+{"level":"info","message":"New client connected: poojV6MGJ-VdvnLyAAAE","timestamp":"2026-10-19T05:57:32.937Z"}
+{"level":"info","message":"New client connected: 0L5bniEF7rcvaCXzAAAF","timestamp":"2026-10-19T05:57:32.948Z"}
+{"level":"info","message":"New client connected: TaIssYiMOhi2YRtsAAAG","timestamp":"2026-10-19T05:57:32.971Z"}
+{"level":"info","message":"New client connected: X3RkNPD-V8VbjdLCAAAH","timestamp":"2026-10-19T05:57:32.998Z"}
+{"level":"info","message":"New client connected: GCcLMqaqzcqMVBpsAAAI","timestamp":"2026-10-19T05:57:33.222Z"}
+{"level":"info","message":"Client disconnected: X3RkNPD-V8VbjdLCAAAH","timestamp":"2026-10-19T06:00:40.457Z"}
+{"level":"info","message":"New client connected: tlUtJbTqO42t_Y0KAAAJ","timestamp":"2026-10-19T06:00:41.969Z"}
+{"level":"info","message":"Client disconnected: y9Hs8nJwx2VThZY3AAAD","timestamp":"2026-10-19T06:01:04.590Z"}
+{"level":"info","message":"New client connected: eDCn6m9S2R9gKjg7AAAK","timestamp":"2026-10-19T06:01:04.624Z"}
+{"level":"info","message":"Client disconnected: eDCn6m9S2R9gKjg7AAAK","timestamp":"2026-10-19T06:01:16.538Z"}
+{"level":"info","message":"New client connected: 5V01RmYNkn0sLR6kAAAL","timestamp":"2026-10-19T06:01:16.618Z"}
+{"level":"info","message":"Client disconnected: GCcLMqaqzcqMVBpsAAAI","timestamp":"2026-10-19T06:02:22.103Z"}
+{"level":"info","message":"Client disconnected: RwpRvMWyz0rReHC3AAAB","timestamp":"2026-10-19T06:02:22.106Z"}
+{"level":"info","message":"Client disconnected: TgLcUJfhgye8hKqXAAAA","timestamp":"2026-10-19T06:02:22.107Z"}
+{"level":"info","message":"Client disconnected: 5V01RmYNkn0sLR6kAAAL","timestamp":"2026-10-19T06:03:03.447Z"}
+{"level":"info","message":"Client disconnected: bZJxJE7maz8oKIFTAAAC","timestamp":"2026-10-19T06:03:03.448Z"}
+{"level":"info","message":"Client disconnected: poojV6MGJ-VdvnLyAAAE","timestamp":"2026-10-19T06:03:03.451Z"}
+{"level":"info","message":"Client disconnected: tlUtJbTqO42t_Y0KAAAJ","timestamp":"2026-10-19T06:03:03.453Z"}
+{"level":"info","message":"Client disconnected: TaIssYiMOhi2YRtsAAAG","timestamp":"2026-10-19T06:03:03.454Z"}
+{"level":"info","message":"New client connected: ShZPFLWDUnvzzsZeAAAM","timestamp":"2026-10-19T06:03:03.558Z"}
+{"level":"info","message":"New client connected: Xbgk3G7zIIm3t-rSAAAN","timestamp":"2026-10-19T06:03:03.561Z"}
+{"code":"ECONNREFUSED","fatal":true,"level":"error","message":"Orders listing error:","stack":"AggregateError: \n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T06:05:13.914Z"}
+{"code":"ECONNREFUSED","fatal":true,"level":"error","message":"Orders listing error:","stack":"AggregateError: \n    at file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/routes/orders.js:38:33\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at authenticate (file:///C:/Users/Himanshu/Downloads/Projects/Resturant%20Management/backend/src/middleware/auth.js:16:5)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at router.process_params (C:\\Users\\Himanshu\\Downloads\\Projects\\Resturant Management\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)","timestamp":"2026-10-19T06:05:23.810Z"}
+{"level":"info","message":"Client disconnected: 0L5bniEF7rcvaCXzAAAF","timestamp":"2026-10-19T06:05:28.838Z"}
+{"level":"info","message":"Client disconnected: Xbgk3G7zIIm3t-rSAAAN","timestamp":"2026-10-19T06:05:28.843Z"}
+{"level":"info","message":"Client disconnected: ShZPFLWDUnvzzsZeAAAM","timestamp":"2026-10-19T06:05:28.846Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-10-19T06:14:58.580Z"}

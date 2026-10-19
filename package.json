@@ -1,0 +1,36 @@
+{
+  "name": "restaurant-backend",
+  "version": "1.0.0",
+  "description": "Shared Express.js backend + MySQL for Customer and Staff/Owner apps",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.4.0",
+    "mysql2": "^3.11.0",
+    "nodemailer": "^10.1.1",
+    "socket.io": "^4.7.5",
+    "uuid": "^9.0.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/supertest": "^7.2.1",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.3.1"
+  }
+}

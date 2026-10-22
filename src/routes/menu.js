@@ -137,8 +137,10 @@ router.post('/upload-image', authenticate, authorizeRoles('owner', 'staff'), upl
     if (!req.file) {
       return res.status(400).json({ error: 'No image file uploaded' });
     }
-    // Generate server URL or relative path
-    const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+    // Generate server URL with https support for cloud tunnels / production
+    const isHttps = req.secure || req.headers['x-forwarded-proto'] === 'https' || req.get('host').includes('trycloudflare.com');
+    const protocol = isHttps ? 'https' : req.protocol;
+    const fileUrl = `${protocol}://${req.get('host')}/uploads/${req.file.filename}`;
     res.json({
       success: true,
       imageUrl: fileUrl,
@@ -165,11 +167,15 @@ router.post('/items', authenticate, authorizeRoles('owner'), async (req, res) =>
       custom_offer,
       description,
       isVegetarian,
+      is_vegetarian,
       isJain,
+      is_jain,
       imageUrl,
       image_url
     } = req.body;
     const finalImage = imageUrl !== undefined ? imageUrl : (image_url !== undefined ? image_url : null);
+    const finalIsVeg = isVegetarian !== undefined ? Boolean(isVegetarian) : (is_vegetarian !== undefined ? Boolean(is_vegetarian) : true);
+    const finalIsJain = isJain !== undefined ? Boolean(isJain) : (is_jain !== undefined ? Boolean(is_jain) : false);
     if (!name || !price) {
       return res.status(400).json({ error: 'Name and price are required' });
     }
@@ -213,8 +219,8 @@ router.post('/items', authenticate, authorizeRoles('owner'), async (req, res) =>
         discount_percent || null,
         deal_tag || null,
         custom_offer || null,
-        isVegetarian ? 1 : 0,
-        isJain ? 1 : 0,
+        finalIsVeg ? 1 : 0,
+        finalIsJain ? 1 : 0,
         finalImage
       ]
     );
@@ -245,12 +251,16 @@ router.put('/items/:id', authenticate, authorizeRoles('owner'), async (req, res)
       custom_offer,
       description,
       isVegetarian,
+      is_vegetarian,
       isJain,
+      is_jain,
       isAvailable,
       imageUrl,
       image_url
     } = req.body;
     const finalImage = imageUrl !== undefined ? imageUrl : (image_url !== undefined ? image_url : null);
+    const finalIsVeg = isVegetarian !== undefined ? (isVegetarian ? 1 : 0) : (is_vegetarian !== undefined ? (is_vegetarian ? 1 : 0) : null);
+    const finalIsJain = isJain !== undefined ? (isJain ? 1 : 0) : (is_jain !== undefined ? (is_jain ? 1 : 0) : null);
 
     let finalCategoryId = categoryId !== undefined ? categoryId : null;
 
@@ -293,8 +303,8 @@ router.put('/items/:id', authenticate, authorizeRoles('owner'), async (req, res)
         deal_tag !== undefined ? (deal_tag || null) : null,
         custom_offer !== undefined ? (custom_offer || null) : null,
         description,
-        isVegetarian,
-        isJain,
+        finalIsVeg,
+        finalIsJain,
         isAvailable,
         finalImage,
         id

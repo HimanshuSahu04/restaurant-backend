@@ -40,7 +40,13 @@ router.post('/process', authenticate, async (req, res) => {
       ['paid', orderId]
     );
 
-    res.json({ message: 'Payment processed successfully' });
+    // Broadcast real-time payment update
+    import('../server.js').then(({ io }) => {
+      io.emit('order:payment', { orderId, payment_status: 'paid' });
+      io.emit('order:status', { orderId, payment_status: 'paid' });
+    }).catch(() => {});
+
+    res.json({ success: true, message: 'Payment processed successfully', payment_status: 'paid' });
   } catch (error) {
     logger.error('Payment processing error:', error);
     res.status(500).json({ error: 'Payment processing failed' });

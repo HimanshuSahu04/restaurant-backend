@@ -443,7 +443,16 @@ router.post('/:orderId/support-requests', authenticate, async (req, res) => {
     }
 
     const requestId = uuidv4();
-    const fullDescription = menuItemId ? `[Item ID: ${menuItemId}] ${description || ''}` : description;
+    let dishName = null;
+    if (menuItemId) {
+      const [dishRows] = await connection.query('SELECT name FROM menu_items WHERE id = ? LIMIT 1', [menuItemId]);
+      if (dishRows.length > 0) {
+        dishName = dishRows[0].name;
+      }
+    }
+    const fullDescription = dishName
+      ? `[Dish: ${dishName}] ${description || ''}`.trim()
+      : (description || '').trim();
 
     // Check if user is Gold Member for priority handling
     const [userRows] = await connection.query('SELECT is_gold, gold_expires_at, gold_type FROM users WHERE id = ?', [userId]);
@@ -760,10 +769,11 @@ router.post('/:orderId/reject', authenticate, authorizeRoles('staff', 'owner'), 
       await connection.query('UPDATE orders SET status = ? WHERE id = ?', [nextStatus, orderId]);
       await connection.query('UPDATE order_items SET status = "cancelled" WHERE order_id = ?', [orderId]);
 
-      // Record in audit table as approved cancellation by owner
+      // Record in audit table as approved cancellation by owner (or refund_pending if already paid)
+      const cancellationStatus = order.payment_status === 'paid' ? 'refund_pending' : 'approved';
       await connection.query(
         'INSERT INTO order_cancellations (id, order_id, cancelled_by, reason, status) VALUES (?, ?, ?, ?, ?)',
-        [uuidv4(), orderId, req.user.userId, `[Owner Direct Cancellation] ${reason}`, 'approved']
+        [uuidv4(), orderId, req.user.userId, `[Owner Direct Cancellation] ${reason}`, cancellationStatus]
       );
 
       // Free table immediately if no other active orders
@@ -1019,8 +1029,35 @@ router.get('/staff/requests', authenticate, authorizeRoles('staff', 'owner'), as
       ORDER BY sr.is_priority DESC, sr.created_at DESC
     `);
 
+    // 5c. Approved cancellations requiring monetary refund to customer
+    const [pendingRefunds] = await pool.query(`
+      SELECT o.id as order_id, o.id, o.total_amount, o.payment_status, o.status as order_status, o.status,
+             o.table_id, t.table_number, u.name as customer_name, u.phone as customer_phone,
+             COALESCE(oc.reason, 'Order Cancelled') as reason,
+             COALESCE(oc.status, 'refund_pending') as cancellation_status,
+             COALESCE(oc.created_at, o.updated_at) as cancelled_at,
+             o.created_at
+      FROM orders o
+      LEFT JOIN tables t ON o.table_id = t.id
+      LEFT JOIN users u ON o.user_id = u.id
+      LEFT JOIN order_cancellations oc ON oc.order_id = o.id
+      WHERE o.status = 'refund_pending' 
+         OR (o.payment_status = 'paid' AND (o.status = 'cancelled' OR oc.status = 'refund_pending'))
+      GROUP BY o.id
+      ORDER BY o.updated_at DESC
+    `);
+
+    for (const refItem of pendingRefunds) {
+      const [items] = await pool.query(
+        `SELECT oi.*, mi.name FROM order_items oi JOIN menu_items mi ON oi.menu_item_id = mi.id WHERE oi.order_id = ?`,
+        [refItem.order_id]
+      );
+      refItem.items = items;
+    }
+
     res.json({
       cancellations: cancellationRequests,
+      pendingRefunds,
       supportRequests
     });
   } catch (error) {
@@ -1062,12 +1099,13 @@ router.post('/:orderId/cancellation-decision', authenticate, authorizeRoles('own
     // If decision is approve
     if (decision === 'approve') {
       const nextStatus = order.payment_status === 'paid' ? 'refund_pending' : 'cancelled';
+      const cancellationStatus = order.payment_status === 'paid' ? 'refund_pending' : 'approved';
 
       await connection.query('UPDATE orders SET status = ? WHERE id = ?', [nextStatus, orderId]);
       await connection.query('UPDATE order_items SET status = "cancelled" WHERE order_id = ?', [orderId]);
       await connection.query(
-        'UPDATE order_cancellations SET status = "approved" WHERE order_id = ? AND status = "requested"',
-        [orderId]
+        'UPDATE order_cancellations SET status = ? WHERE order_id = ? AND status = "requested"',
+        [cancellationStatus, orderId]
       );
 
       // Free table if occupied immediately
@@ -1100,7 +1138,9 @@ router.post('/:orderId/cancellation-decision', authenticate, authorizeRoles('own
         success: true,
         orderId,
         status: nextStatus,
-        message: 'Cancellation request approved by restaurant.'
+        message: order.payment_status === 'paid'
+          ? 'Cancellation approved. Order marked for refund processing.'
+          : 'Cancellation request approved by restaurant.'
       });
     } else {
       // Rejection: revert order back to its working state (e.g. 'preparing')
@@ -1134,6 +1174,165 @@ router.post('/:orderId/cancellation-decision', authenticate, authorizeRoles('own
     await connection.rollback();
     logger.error('Cancellation decision error:', error);
     res.status(500).json({ error: 'Failed to process cancellation decision' });
+  } finally {
+    connection.release();
+  }
+});
+
+// 6b. Process Pending Refund back to Customer (Staff or Owner)
+router.post('/:orderId/process-refund', authenticate, authorizeRoles('staff', 'owner'), async (req, res) => {
+  const connection = await pool.getConnection();
+  try {
+    await connection.beginTransaction();
+    const { orderId } = req.params;
+    const { refundMethod = 'Cash Handed to Customer', refundNote = '', selectedItemIds } = req.body;
+    const processedRole = req.user.role;
+
+    const [orders] = await connection.query(
+      'SELECT o.*, t.table_number, u.name as customer_name, u.phone as customer_phone FROM orders o LEFT JOIN tables t ON o.table_id = t.id LEFT JOIN users u ON o.user_id = u.id WHERE o.id = ? FOR UPDATE',
+      [orderId]
+    );
+
+    if (orders.length === 0) {
+      await connection.rollback();
+      return res.status(404).json({ error: 'Order not found' });
+    }
+
+    const order = orders[0];
+
+    // Must be in refund_pending or paid+cancelled or have refund support
+    const isRefundable = order.status === 'refund_pending' ||
+                         (order.payment_status === 'paid' && order.status === 'cancelled') ||
+                         order.status === 'refund_completed';
+
+    if (!isRefundable) {
+      await connection.rollback();
+      return res.status(400).json({
+        error: `Order is not awaiting refund. Current status: ${order.status}, Payment: ${order.payment_status}`
+      });
+    }
+
+    // Fetch all items belonging to this order
+    const [allItems] = await connection.query(
+      'SELECT oi.*, mi.name FROM order_items oi JOIN menu_items mi ON oi.menu_item_id = mi.id WHERE oi.order_id = ?',
+      [orderId]
+    );
+
+    let itemsToRefund = allItems;
+    let isFullRefund = true;
+
+    // If specific items were selected by staff/owner, calculate refund exclusively for those items
+    if (Array.isArray(selectedItemIds) && selectedItemIds.length > 0) {
+      itemsToRefund = allItems.filter(
+        (it) => selectedItemIds.includes(it.id) || selectedItemIds.includes(it.menu_item_id)
+      );
+
+      if (itemsToRefund.length === 0) {
+        await connection.rollback();
+        return res.status(400).json({ error: 'None of the selected items were found in this order.' });
+      }
+
+      isFullRefund = itemsToRefund.length >= allItems.length;
+
+      const refundItemIds = itemsToRefund.map((it) => it.id);
+      await connection.query(
+        'UPDATE order_items SET status = "cancelled" WHERE id IN (?)',
+        [refundItemIds]
+      );
+    } else {
+      await connection.query(
+        'UPDATE order_items SET status = "cancelled" WHERE order_id = ?',
+        [orderId]
+      );
+    }
+
+    // Exact calculated refund amount from item prices & quantities including proportional taxes
+    const orderItemsSubtotal = allItems.reduce(
+      (sum, it) => sum + (Number(it.price) * (it.quantity || 1)),
+      0
+    );
+    const taxAndFeeRatio = orderItemsSubtotal > 0 ? (Number(order.total_amount) / orderItemsSubtotal) : 1;
+
+    let calculatedRefundAmount = 0;
+    if (isFullRefund) {
+      calculatedRefundAmount = Number(order.total_amount);
+    } else {
+      const selectedSubtotal = itemsToRefund.reduce(
+        (sum, it) => sum + (Number(it.price) * (it.quantity || 1)),
+        0
+      );
+      calculatedRefundAmount = Math.round(selectedSubtotal * taxAndFeeRatio * 100) / 100;
+    }
+
+    const itemsSummary = itemsToRefund.map((it) => `${it.quantity}x ${it.name}`).join(', ');
+    const nextOrderStatus = isFullRefund ? 'refund_completed' : (order.status === 'refund_pending' ? 'refund_completed' : order.status);
+
+    // 1. Update order status and payment status
+    await connection.query(
+      'UPDATE orders SET status = ?, payment_status = "refunded", updated_at = NOW() WHERE id = ?',
+      [nextOrderStatus, orderId]
+    );
+
+    // 2. Update order_cancellations status if exists
+    await connection.query(
+      'UPDATE order_cancellations SET status = "refund_completed", updated_at = NOW() WHERE order_id = ?',
+      [orderId]
+    );
+
+    // 3. Update support requests if a refund ticket exists
+    await connection.query(
+      'UPDATE order_support_requests SET status = "refund_completed", description = CONCAT(COALESCE(description, ""), " [Refunded ₹", ?, " for (", ?, ") via ", ?, " by ", ?, "]") WHERE order_id = ? AND type = "refund"',
+      [calculatedRefundAmount.toFixed(2), itemsSummary, refundMethod, processedRole, orderId]
+    );
+
+    await connection.commit();
+
+    const refundAmountFormatted = `₹${calculatedRefundAmount.toFixed(2)}`;
+    const notificationPayload = {
+      orderId,
+      status: nextOrderStatus,
+      payment_status: 'refunded',
+      amount: calculatedRefundAmount,
+      isFullRefund,
+      itemsSummary,
+      refundedItems: itemsToRefund.map((it) => ({
+        id: it.id,
+        name: it.name,
+        quantity: it.quantity,
+        price: it.price,
+        subtotal: Number(it.price) * (it.quantity || 1)
+      })),
+      refundMethod,
+      refundNote,
+      tableNumber: order.table_number,
+      customerName: order.customer_name,
+      processedRole,
+      title: isFullRefund ? 'Refund Processed Successfully ✓' : 'Partial Refund Processed ✓',
+      message: isFullRefund
+        ? `Full refund of ${refundAmountFormatted} for Order #${orderId.slice(0, 8)} has been returned via ${refundMethod}.`
+        : `Refund of ${refundAmountFormatted} for (${itemsSummary}) has been returned via ${refundMethod}.`
+    };
+
+    io.emit('order:status', { orderId, status: nextOrderStatus, payment_status: 'refunded' });
+    io.emit('order:payment', { orderId, payment_status: 'refunded' });
+    io.emit('order:refund_completed', notificationPayload);
+    io.emit('order:refund_processed', notificationPayload);
+
+    return res.json({
+      success: true,
+      orderId,
+      status: nextOrderStatus,
+      payment_status: 'refunded',
+      amount: calculatedRefundAmount,
+      itemsSummary,
+      isFullRefund,
+      refundMethod,
+      message: `Refund of ${refundAmountFormatted} for ${itemsSummary} successfully processed and returned to customer.`
+    });
+  } catch (error) {
+    await connection.rollback();
+    logger.error('Refund processing error:', error);
+    res.status(500).json({ error: 'Failed to process refund' });
   } finally {
     connection.release();
   }

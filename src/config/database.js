@@ -6,6 +6,7 @@ dotenv.config();
 // Create a connection pool with retry on disconnect
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '3306', 10),
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'restaurant_db',
@@ -16,6 +17,8 @@ const pool = mysql.createPool({
   // Auto-reconnect on lost connection
   enableKeepAlive: true,
   keepAliveInitialDelay: 0,
+  // Support SSL for Cloud databases (TiDB Cloud, AWS, etc.)
+  ssl: process.env.DB_SSL === 'true' || process.env.DB_HOST?.includes('tidbcloud.com') ? { minVersion: 'TLSv1.2', rejectUnauthorized: true } : undefined,
 });
 
 export default pool;

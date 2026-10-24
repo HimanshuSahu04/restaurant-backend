@@ -727,7 +727,7 @@ router.post('/:orderId/accept', authenticate, authorizeRoles('staff', 'owner'), 
   } catch (error) {
     await connection.rollback();
     logger.error('Order acceptance error:', error);
-    res.status(500).json({ error: 'Failed to accept order' });
+    res.status(500).json({ error: error.message || 'Failed to accept order' });
   } finally {
     connection.release();
   }
@@ -847,7 +847,7 @@ router.post('/:orderId/reject', authenticate, authorizeRoles('staff', 'owner'), 
   } catch (error) {
     await connection.rollback();
     logger.error('Order cancel/reject error:', error);
-    res.status(500).json({ error: 'Failed to process cancellation' });
+    res.status(500).json({ error: error.message || 'Failed to process cancellation' });
   } finally {
     connection.release();
   }
@@ -1173,7 +1173,7 @@ router.post('/:orderId/cancellation-decision', authenticate, authorizeRoles('own
   } catch (error) {
     await connection.rollback();
     logger.error('Cancellation decision error:', error);
-    res.status(500).json({ error: 'Failed to process cancellation decision' });
+    res.status(500).json({ error: error.message || 'Failed to process cancellation decision' });
   } finally {
     connection.release();
   }

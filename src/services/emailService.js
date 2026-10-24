@@ -1,34 +1,22 @@
 import nodemailer from 'nodemailer';
 import { logger } from '../utils/logger.js';
 
-let transporter = null;
+// Persistent transporter singleton with connection pooling for instant dispatch
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  pool: true,
+  maxConnections: 5,
+  maxMessages: 100,
+  auth: {
+    user: process.env.SMTP_USER || 'tempmailh23@gmail.com',
+    pass: process.env.SMTP_PASS || 'suqs emlr ythy zugb',
+  },
+  connectionTimeout: 8000,
+  greetingTimeout: 8000,
+  socketTimeout: 10000,
+});
 
-// Initialize transporter (checks for SMTP environment variables or fallback to test/console mode)
-const getTransporter = async () => {
-  if (transporter) return transporter;
-
-  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
-  const user = process.env.SMTP_USER || 'tempmailh23@gmail.com';
-  const pass = process.env.SMTP_PASS || 'suqs emlr ythy zugb';
-  const port = Number(process.env.SMTP_PORT) || 465;
-  const isSecure = process.env.SMTP_SECURE === 'false' ? false : true;
-
-  transporter = nodemailer.createTransport({
-    service: host.includes('gmail') ? 'gmail' : undefined,
-    host: host.includes('gmail') ? undefined : host,
-    port: host.includes('gmail') ? undefined : port,
-    secure: host.includes('gmail') ? undefined : isSecure,
-    auth: {
-      user,
-      pass,
-    },
-    connectionTimeout: 10000,
-    greetingTimeout: 10000,
-    socketTimeout: 15000,
-  });
-
-  return transporter;
-};
+const getTransporter = async () => transporter;
 
 export const sendOtpEmail = async (email, otp, purpose = 'login') => {
   const mailer = await getTransporter();

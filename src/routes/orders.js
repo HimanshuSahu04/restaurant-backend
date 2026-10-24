@@ -148,7 +148,7 @@ router.post('/', authenticate, validateOrder, async (req, res) => {
 
     for (const item of items) {
       const [menuItems] = await connection.query(
-        'SELECT id, name, price, is_available FROM menu_items WHERE id = ? LOCK IN SHARE MODE',
+        'SELECT id, name, price, is_available FROM menu_items WHERE id = ?',
         [item.menuItemId]
       );
 
@@ -239,7 +239,7 @@ router.post('/', authenticate, validateOrder, async (req, res) => {
   } catch (error) {
     await connection.rollback();
     logger.error('Order creation error:', error);
-    res.status(500).json({ error: 'Order creation failed' });
+    res.status(500).json({ error: error.message || 'Order creation failed' });
   } finally {
     connection.release();
   }

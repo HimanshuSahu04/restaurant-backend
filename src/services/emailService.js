@@ -8,17 +8,19 @@ const getTransporter = async () => {
   if (transporter) return transporter;
 
   if (process.env.SMTP_HOST && process.env.SMTP_USER) {
+    const port = Number(process.env.SMTP_PORT) || 587;
+    const isSecure = process.env.SMTP_SECURE === 'true' || port === 465;
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === 'true',
+      port,
+      secure: isSecure,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
-      socketTimeout: 15000,
+      connectionTimeout: 5000,
+      greetingTimeout: 5000,
+      socketTimeout: 10000,
     });
   } else {
     // Development fallback using Ethereal or test account

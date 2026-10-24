@@ -50,8 +50,10 @@ router.post('/login/send-otp', async (req, res) => {
       [uuidv4(), user.email, otp, 'login', JSON.stringify({ userId: user.id }), expiresAt]
     );
 
-    // Send email to user's registered email
-    await sendOtpEmail(user.email, otp, 'login');
+    // Send email to user's registered email (non-blocking)
+    sendOtpEmail(user.email, otp, 'login').catch((err) => {
+      logger.error('Background login OTP email error:', err);
+    });
 
     res.json({
       success: true,
@@ -187,8 +189,10 @@ router.post('/register/send-otp', async (req, res) => {
       ]
     );
 
-    // Send email
-    await sendOtpEmail(trimmedEmail, otp, 'registration');
+    // Send email (non-blocking)
+    sendOtpEmail(trimmedEmail, otp, 'registration').catch((err) => {
+      logger.error('Background registration OTP email error:', err);
+    });
 
     res.json({
       success: true,
@@ -444,7 +448,9 @@ router.post('/login', async (req, res) => {
         [uuidv4(), user.email, otp, 'owner_login', JSON.stringify({ userId: user.id }), expiresAt]
       );
 
-      await sendOtpEmail(user.email, otp, 'owner login');
+      sendOtpEmail(user.email, otp, 'owner login').catch((err) => {
+        logger.error('Background owner login OTP email error:', err);
+      });
 
       return res.json({
         success: true,
@@ -604,13 +610,15 @@ router.post('/employee/register/send-otp', async (req, res) => {
       ]
     );
 
-    // Send verification code with terms and filled details
-    await sendEmployeeRegistrationOtpEmail(cleanEmail, otp, {
+    // Send verification code with terms and filled details (non-blocking)
+    sendEmployeeRegistrationOtpEmail(cleanEmail, otp, {
       name: name.trim(),
       username: cleanUsername,
       phone: cleanPhone,
       email: cleanEmail,
       role: role
+    }).catch((err) => {
+      logger.error('Background employee reg OTP email error:', err);
     });
 
     res.json({

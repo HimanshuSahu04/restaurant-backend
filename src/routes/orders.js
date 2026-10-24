@@ -5,6 +5,7 @@ import { authenticate, authorizeRoles } from '../middleware/auth.js';
 import { validateOrder } from '../middleware/validation.js';
 import { logger } from '../utils/logger.js';
 import { io } from '../server.js';
+import { sendPushNotificationToUser, sendPushNotificationToStaff } from '../services/pushNotificationService.js';
 
 const router = express.Router();
 
@@ -223,6 +224,13 @@ router.post('/', authenticate, validateOrder, async (req, res) => {
     if (targetTableId) {
       io.emit('table:updated', { tableId: targetTableId, status: 'occupied' });
     }
+
+    // Push notification to staff & owner: New Order Arrived!
+    sendPushNotificationToStaff({
+      title: isPriorityOrder ? '⭐ Priority Order Received!' : '🍽️ New Order Received!',
+      body: `Order #${orderId.slice(0, 8)} (${targetTableId ? 'Dine-In' : 'Takeaway'}) - ₹${totalAmount.toFixed(2)}. Tap to accept.`,
+      data: { orderId, screen: 'dashboard' }
+    }).catch(err => logger.error('Staff push notification error:', err));
 
     res.status(201).json({
       orderId,
@@ -564,6 +572,13 @@ router.post('/call-waiter', authenticate, async (req, res) => {
     io.emit('order:support_requested', waiterPayload);
     io.emit('notification:staff', waiterPayload);
 
+    // Push notification to staff & owner for Waiter Call
+    sendPushNotificationToStaff({
+      title: isGoldUser ? '⭐ Priority: Waiter Assistance Required' : '🔔 Waiter Assistance Called',
+      body: `Table ${tableNumber || 'Floor'} (${user.name || 'Diner'}): "${serviceReason}"`,
+      data: { requestId, screen: 'requests' }
+    }).catch(err => logger.error('Waiter call push error:', err));
+
     res.status(201).json({
       success: true,
       requestId,
@@ -718,6 +733,13 @@ router.post('/:orderId/accept', authenticate, authorizeRoles('staff', 'owner'), 
     io.emit('order:status', { orderId, status: 'accepted', updatedBy: req.user.role });
     io.emit('order:accepted', { orderId, status: 'accepted' });
 
+    // Push notification to Customer
+    sendPushNotificationToUser(order.user_id, {
+      title: '🍳 Order Accepted!',
+      body: `Your Order #${orderId.slice(0, 8)} has been accepted by the kitchen and is being scheduled.`,
+      data: { orderId, screen: 'order-details' }
+    }).catch(err => logger.error('Customer push notification error:', err));
+
     res.json({
       success: true,
       orderId,
@@ -794,6 +816,13 @@ router.post('/:orderId/reject', authenticate, authorizeRoles('staff', 'owner'), 
 
       io.emit('order:status', { orderId, status: nextStatus, reason });
       io.emit('order:cancelled', { orderId, status: nextStatus, reason, tableFreed, cancelledByRole: 'owner' });
+
+      // Push notification to Customer
+      sendPushNotificationToUser(order.user_id, {
+        title: '❌ Order Cancelled',
+        body: `Order #${orderId.slice(0, 8)} was cancelled by restaurant: "${reason}".`,
+        data: { orderId, screen: 'order-details' }
+      }).catch(err => logger.error('Customer cancel push error:', err));
 
       return res.json({
         success: true,
@@ -911,6 +940,26 @@ router.patch('/:orderId/status', authenticate, authorizeRoles('staff', 'owner'),
     await connection.commit();
 
     io.emit('order:status', { orderId, status });
+
+    // Customer push notification for lifecycle progress
+    const statusTitles = {
+      preparing: '👨‍🍳 Kitchen is Preparing Your Food',
+      ready: '🔔 Your Order is Ready!',
+      served: '✨ Order Served - Enjoy Your Meal!'
+    };
+    const statusBodies = {
+      preparing: `Chef has started cooking your order #${orderId.slice(0, 8)}.`,
+      ready: `Order #${orderId.slice(0, 8)} is freshly prepared and will be at your table shortly!`,
+      served: `Order #${orderId.slice(0, 8)} has been served. Have a wonderful dining experience!`
+    };
+
+    if (statusTitles[status]) {
+      sendPushNotificationToUser(order.user_id, {
+        title: statusTitles[status],
+        body: statusBodies[status],
+        data: { orderId, screen: 'order-details' }
+      }).catch(err => logger.error('Status push notification error:', err));
+    }
 
     res.json({
       success: true,

@@ -695,5 +695,32 @@ router.post('/employee/register/verify-otp', async (req, res) => {
   }
 });
 
+// ==========================================
+// 8. Register / Update Push Notification Token
+// ==========================================
+router.post('/push-token', async (req, res) => {
+  try {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    const token = authHeader.split(' ')[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key');
+    const { pushToken } = req.body;
+
+    if (!pushToken) {
+      return res.status(400).json({ error: 'pushToken is required' });
+    }
+
+    await pool.query('UPDATE users SET push_token = ? WHERE id = ?', [pushToken, decoded.userId]);
+    logger.info(`Updated push_token for user ${decoded.userId}`);
+
+    res.json({ success: true, message: 'Push token registered successfully' });
+  } catch (error) {
+    logger.error('Push token registration error:', error);
+    res.status(500).json({ error: 'Failed to register push token' });
+  }
+});
+
 export default router;
 

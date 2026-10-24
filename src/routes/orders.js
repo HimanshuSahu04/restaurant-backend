@@ -1032,10 +1032,10 @@ router.get('/staff/requests', authenticate, authorizeRoles('staff', 'owner'), as
     // 5c. Approved cancellations requiring monetary refund to customer
     const [pendingRefunds] = await pool.query(`
       SELECT o.id as order_id, o.id, o.total_amount, o.payment_status, o.status as order_status, o.status,
-             o.table_id, t.table_number, u.name as customer_name, u.phone as customer_phone,
-             COALESCE(oc.reason, 'Order Cancelled') as reason,
-             COALESCE(oc.status, 'refund_pending') as cancellation_status,
-             COALESCE(oc.created_at, o.updated_at) as cancelled_at,
+             o.table_id, MAX(t.table_number) as table_number, MAX(u.name) as customer_name, MAX(u.phone) as customer_phone,
+             COALESCE(MAX(oc.reason), 'Order Cancelled') as reason,
+             COALESCE(MAX(oc.status), 'refund_pending') as cancellation_status,
+             COALESCE(MAX(oc.created_at), o.updated_at) as cancelled_at,
              o.created_at
       FROM orders o
       LEFT JOIN tables t ON o.table_id = t.id
@@ -1043,7 +1043,7 @@ router.get('/staff/requests', authenticate, authorizeRoles('staff', 'owner'), as
       LEFT JOIN order_cancellations oc ON oc.order_id = o.id
       WHERE o.status = 'refund_pending' 
          OR (o.payment_status = 'paid' AND (o.status = 'cancelled' OR oc.status = 'refund_pending'))
-      GROUP BY o.id
+      GROUP BY o.id, o.total_amount, o.payment_status, o.status, o.table_id, o.created_at, o.updated_at
       ORDER BY o.updated_at DESC
     `);
 

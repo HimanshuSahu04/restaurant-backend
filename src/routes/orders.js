@@ -1457,6 +1457,22 @@ router.post('/support-requests/:requestId/decision', authenticate, authorizeRole
     await connection.commit();
     io.emit('order:support_updated', { requestId, orderId: request.order_id, status: nextSupportStatus, decision });
 
+    // Send push notification to customer for support case resolution
+    const supportLabels = {
+      approved: '✓ Support Request Approved',
+      rejected: 'Support Request Update',
+      replacement_preparing: '🍳 Replacement Being Prepared',
+      replacement_ready: '🔔 Replacement Ready to Serve',
+      refund_pending: '⏳ Refund Approved & Processing',
+      refund_completed: '✓ Refund Completed',
+      closed: '✓ Support Request Resolved'
+    };
+    sendPushNotificationToUser(request.user_id, {
+      title: supportLabels[nextSupportStatus] || 'Support Request Updated',
+      body: note ? `Update: ${note}` : `Your support request status has been updated to ${nextSupportStatus.replace('_', ' ')}.`,
+      data: { orderId: request.order_id, screen: 'order-details' }
+    }).catch(err => logger.error('Support push notification error:', err));
+
     res.json({
       success: true,
       requestId,

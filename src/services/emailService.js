@@ -7,45 +7,25 @@ let transporter = null;
 const getTransporter = async () => {
   if (transporter) return transporter;
 
-  if (process.env.SMTP_HOST && process.env.SMTP_USER) {
-    const port = Number(process.env.SMTP_PORT) || 587;
-    const isSecure = process.env.SMTP_SECURE === 'true' || port === 465;
-    transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port,
-      secure: isSecure,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-      connectionTimeout: 5000,
-      greetingTimeout: 5000,
-      socketTimeout: 10000,
-    });
-  } else {
-    // Development fallback using Ethereal or test account
-    try {
-      const testAccount = await nodemailer.createTestAccount();
-      transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false,
-        auth: {
-          user: testAccount.user,
-          pass: testAccount.pass,
-        },
-      });
-      logger.info(`Initialized dev email transporter (Ethereal: ${testAccount.user})`);
-    } catch (err) {
-      logger.warn('Could not create ethereal test account, will log OTPs directly.');
-      transporter = {
-        sendMail: async (opts) => {
-          logger.info(`[EMAIL TO ${opts.to}]: ${opts.subject}\n${opts.text || opts.html}`);
-          return { messageId: 'simulated-' + Date.now() };
-        }
-      };
-    }
-  }
+  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const user = process.env.SMTP_USER || 'tempmailh23@gmail.com';
+  const pass = process.env.SMTP_PASS || 'suqs emlr ythy zugb';
+  const port = Number(process.env.SMTP_PORT) || 465;
+  const isSecure = process.env.SMTP_SECURE === 'false' ? false : true;
+
+  transporter = nodemailer.createTransport({
+    service: host.includes('gmail') ? 'gmail' : undefined,
+    host: host.includes('gmail') ? undefined : host,
+    port: host.includes('gmail') ? undefined : port,
+    secure: host.includes('gmail') ? undefined : isSecure,
+    auth: {
+      user,
+      pass,
+    },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
+  });
 
   return transporter;
 };

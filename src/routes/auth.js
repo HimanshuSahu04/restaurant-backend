@@ -200,7 +200,6 @@ router.post('/register/send-otp', async (req, res) => {
       message: `Verification code: ${otp} (also sent to ${trimmedEmail})`,
       otp
     });
-    });
   } catch (error) {
     logger.error('Register send-otp error:', error);
     res.status(500).json({ error: 'Failed to send registration OTP.' });

@@ -57,7 +57,8 @@ router.post('/login/send-otp', async (req, res) => {
 
     res.json({
       success: true,
-      message: `Verification OTP has been sent to ${maskEmail(user.email)}.`,
+      message: `Verification code: ${otp} (also sent to ${maskEmail(user.email)})`,
+      otp,
       email: user.email
     });
   } catch (error) {
@@ -196,7 +197,9 @@ router.post('/register/send-otp', async (req, res) => {
 
     res.json({
       success: true,
-      message: `Verification code sent to ${trimmedEmail}.`
+      message: `Verification code: ${otp} (also sent to ${trimmedEmail})`,
+      otp
+    });
     });
   } catch (error) {
     logger.error('Register send-otp error:', error);
@@ -458,7 +461,8 @@ router.post('/login', async (req, res) => {
         role: 'owner',
         email: user.email,
         maskedEmail: maskEmail(user.email),
-        message: `Security verification code sent to Owner email (${maskEmail(user.email)}).`
+        message: `Owner Security Code: ${otp} (sent to ${maskEmail(user.email)})`,
+        otp
       });
     }
   } catch (err) {
@@ -623,7 +627,8 @@ router.post('/employee/register/send-otp', async (req, res) => {
 
     res.json({
       success: true,
-      message: `Verification code and terms sent to ${cleanEmail}.`
+      message: `Verification code: ${otp} (sent to ${cleanEmail})`,
+      otp
     });
   } catch (error) {
     logger.error('Employee register send-otp error:', error);
